@@ -1,0 +1,839 @@
+{
+  "files": [
+    {
+      "path": "output/capacity_replay_20260914/report.md",
+      "container": null,
+      "original_sha256": "b0a9e4b1aa9a1f3326bebdebe6df200c0a2cb5bd4f6aa04c3fe800a0220a0476",
+      "public_sha256": "5fddcb286cff469a76f7567cf6e0de00643e48145b27acfc2975326ab42a76ab",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 8063,
+      "public_bytes": 7912,
+      "table_rows_original": 33,
+      "table_rows_public": 33,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "output/capture_contract_20260914/report.md",
+      "container": null,
+      "original_sha256": "2715b8eca15b59452170d4c335e76b1a54603ee289a97c13d8811ba0172f5c5d",
+      "public_sha256": "ca9e24614431eb394b55c483c7b974c0428081ad451923b5817dc920bc9a454c",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 8581,
+      "public_bytes": 8438,
+      "table_rows_original": 28,
+      "table_rows_public": 28,
+      "table_prose_rows_changed": [
+        "| 評委關切 | 本輪已取得 | 仍需的資料 |"
+      ]
+    },
+    {
+      "path": "output/observation_adapter_20260914/report.md",
+      "container": null,
+      "original_sha256": "ed445ca76d5f49ba37024fd05708a1afa1645ed1d1d3ef7492d9ca8e4323f8cd",
+      "public_sha256": "638a7d5ee496811f277c75121b3a75edbb666288c0a0677d68d971f71cd7a36d",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 7916,
+      "public_bytes": 7827,
+      "table_rows_original": 23,
+      "table_rows_public": 23,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "output/spatial_capture_20260914/report.md",
+      "container": null,
+      "original_sha256": "d99935db4e0c9e481784966eef6842929066319239fc051731eefe39564f6a0c",
+      "public_sha256": "2235834ecfffa64aca090085d0a563375bb8cee4100f7a65f1c0d0abd623ad19",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 9937,
+      "public_bytes": 9705,
+      "table_rows_original": 27,
+      "table_rows_public": 27,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "output/wichoose_service_20260914/report.md",
+      "container": null,
+      "original_sha256": "fac1d36a7f27e6a63ca31b915c5568e8411a2b3fa84914c4b285cff5f1bb0d24",
+      "public_sha256": "f265fbd07646ca296aaceb24d3f27db69ac880b66c740ae0075ecd9a191c1fd3",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 8687,
+      "public_bytes": 8515,
+      "table_rows_original": 34,
+      "table_rows_public": 34,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P19_ns3_policy_validation_20260914/independent_design/formal_independent_audit.md",
+      "container": null,
+      "original_sha256": "f95f3064967e63038c419ebdd090828189b51cf67b5601983445d86c3351c255",
+      "public_sha256": "6b68ec98bcd94ce332146cc58186374d1372019ba47e2f70313119dd7856550e",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 10374,
+      "public_bytes": 9892,
+      "table_rows_original": 14,
+      "table_rows_public": 14,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P19_ns3_policy_validation_20260914/independent_statistics/formal_statistics_findings.md",
+      "container": null,
+      "original_sha256": "f743539d6db1900294bac25554e0b555ffbb8535fea00a669ceacafb06081c41",
+      "public_sha256": "b4966ba6d649e8903ff85642e8693df648c66cf3931e00c70b1f90089b4c3e52",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 4814,
+      "public_bytes": 4780,
+      "table_rows_original": 6,
+      "table_rows_public": 6,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P11_react_reference_20260912/README.md",
+      "container": null,
+      "original_sha256": "53425e3468584f0a98f370366d9257e7e1b07ee438285eeba050e114a93e83fb",
+      "public_sha256": "7646b026e0dd07571f97c578a4a5cf047431396c53eeca59439be04937561ce4",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 7694,
+      "public_bytes": 7640,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P12_context_threshold_followup_20260912/evidence_report.md",
+      "container": null,
+      "original_sha256": "323202590e21c778902a10f7cfacfff2543f28abd619f6b090afd3a1cde3d7d9",
+      "public_sha256": "f7f4193ca490e9489e6f022e64b76b678f96105cd3939581f7490c565566c304",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 7578,
+      "public_bytes": 7487,
+      "table_rows_original": 40,
+      "table_rows_public": 40,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/analysis/followup_stats/README.md",
+      "container": null,
+      "original_sha256": "8cf1961a0b4ca348c41e8dcd3081f66501f985eae50033dbb59aacc815640971",
+      "public_sha256": "07831f2ca9e53882b626cb52bcbd48a39619d1175fb91d627beff0d4a6fdc627",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 2142,
+      "public_bytes": 1863,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/analysis/followup_cost_comparison/interpretation.md",
+      "container": null,
+      "original_sha256": "440727e793a29bfe1a7de73a663690d21ca398c670671b6d3bbeeaf3fdfe641c",
+      "public_sha256": "57a94479e7344b3deec37a6456cdcfea3f01b4476d322d19d5399522bbf514f4",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 1570,
+      "public_bytes": 1576,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P15_measured_service_validation_20260913/README.md",
+      "container": null,
+      "original_sha256": "6cb8744bc5f9c648cc0390ecec284b50dedfb3d846b4996563a8a243fa516a4f",
+      "public_sha256": "563e31028d128872c044d5fd5cc9d9be3f2eae2e538c95fe322d65c9339f3a14",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 5095,
+      "public_bytes": 5019,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P15_measured_service_validation_20260913/ducc/report.md",
+      "container": null,
+      "original_sha256": "d1a84db2a66be89afd5f749d8b3125a7e640c1be73378a455eef077e8efdb4cb",
+      "public_sha256": "e9ab63c11e07cd36544d9fa3cdd1dc7119fac21b214ef47b82bc7ceddb77ecc3",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 7659,
+      "public_bytes": 7634,
+      "table_rows_original": 21,
+      "table_rows_public": 21,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P15_measured_service_validation_20260913/video/independent/report.md",
+      "container": null,
+      "original_sha256": "d94335d21479e0a39d9d73e37895671991feff8b13de902893355cb4947d8437",
+      "public_sha256": "8f49900b120914c46f0f4f4c1bdd8f6ac8c634a341d7a76d40d24723a74463bd",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 8732,
+      "public_bytes": 8574,
+      "table_rows_original": 28,
+      "table_rows_public": 28,
+      "table_prose_rows_changed": [
+        "| 只因兩個模型参照到觀測的 W1 接近而推論兩個參照分布相同／不變 | Claim scope | **已修正**：最新 A.19 已刪去該推論，只列兩個已核實的參照距離。 |",
+        "| 將捕獲層 bytes 說成 TCP 已接受、播放成功或完整 application goodput | Measurement scope | **已處理**：正文與回覆使用 captured wording；README 顯式說明 RST 後封包與捕獲邊界。 |"
+      ]
+    },
+    {
+      "path": "output/public_trace_validation_20260913/execution_review.md",
+      "container": null,
+      "original_sha256": "a52baf5726ed794ce9dfaa62e58f1b9ea3b74dd50277dbe5860521772a3b0862",
+      "public_sha256": "bc61ce1eca67784d7369a6496fc20a3ddcb5c0a72c43d27d8a77a88bfda518fd",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 2943,
+      "public_bytes": 2685,
+      "table_rows_original": 14,
+      "table_rows_public": 13,
+      "table_prose_rows_changed": [
+        "| manuscript_and_response_claim_alignment | PASS |"
+      ]
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_statistics/design_review.md",
+      "container": null,
+      "original_sha256": "7a351f38871e22c2905af060423a092e298edbe89033293c45279d6a0770c087",
+      "public_sha256": "889d1aa893054c3209aae96ef0053b7108730001508b9b7a78de495d3b60b3ab",
+      "reason": "Public reading derivative of a historical preoutcome statistical design note; original scientific seals remain historical. Only manuscript integration locators are omitted.",
+      "original_bytes": 5038,
+      "public_bytes": 4209,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P20_observation_adapter_20260914/README.md",
+      "container": null,
+      "original_sha256": "2bb0b4b1c0295ae08320fba9f086aed9ebbe84a845315821fca5d627d9002ca3",
+      "public_sha256": "462827568cd3ed68b5350dfaef90e6b904a3fb61a3fe755517e3694e91b1bf9a",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 2059,
+      "public_bytes": 2041,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P21_spatial_capture_20260914/README.md",
+      "container": null,
+      "original_sha256": "3b9d9967e48a4dabe163e736d685a70b27de5cda8e44749505a5423ff7748cc6",
+      "public_sha256": "d4cdf8f53c436900b34227c504945b55d769dd08702357fd1ca761bf4bff9d0d",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 1702,
+      "public_bytes": 1722,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/README.md",
+      "container": null,
+      "original_sha256": "1934ea51c32001656dc5491db892e0f86d120d83b1bb8590a669cacb26b0bd50",
+      "public_sha256": "bb31153a75e176b07839b7da3f8cf0459062854c3d87a62b8d9ce97ef0abb1c1",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 1870,
+      "public_bytes": 1894,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P23_wichoose_service_20260914/README.md",
+      "container": null,
+      "original_sha256": "b55d34d2cc81bd1077b98c89542a98f3c4d8f1c257197e74f483fd90b6b0803f",
+      "public_sha256": "817b5f15f0b839ab42b10c11e4f8c7ea1da1cb6807aa11382640e122abbcf5e5",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 1620,
+      "public_bytes": 1653,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "revision_work/new_experiments/P24_capacity_replay_20260914/README.md",
+      "container": null,
+      "original_sha256": "b00217d0aca7b33c18a6a2ef23e09853a5e98694b57d56d75d4a55c641a7797e",
+      "public_sha256": "c7e00a8a5353b968c553a4125b6030d0ab4b6d64bec5cbc748b70812ce93ec34",
+      "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+      "original_bytes": 1592,
+      "public_bytes": 1579,
+      "table_rows_original": 0,
+      "table_rows_public": 0,
+      "table_prose_rows_changed": []
+    },
+    {
+      "path": "supplementary/paper7_reproducibility_package.zip",
+      "original_sha256": "e7a5fbdb6d9f04c963b5f6f2e28899de0c007a30dc4ee594ee612751b05ff8bc",
+      "public_sha256": "ae1b31fbbdfcf743a7e87be73ba736967a0b89bb0d013d846f7d9ce28b64e8f3",
+      "reason": "Public legacy archive: two manuscript audit files omitted; three documentation files edited. Every retained scientific member is byte-identical.",
+      "unchanged_scientific_members": [
+        {
+          "path": "results/paper7_failure_mode_probes.csv",
+          "sha256": "5fb31af4896654c29f9f128b79148935fbdf548689266826bac0c54b62e5df90"
+        },
+        {
+          "path": "results/paper7_failure_mode_summary.csv",
+          "sha256": "18f3e6e6c8ee95ee244dcc1c17781b94de321872e4565fa7637ba0216ff96b69"
+        },
+        {
+          "path": "results/paper7_feasibility_by_mission.csv",
+          "sha256": "1396efaf1571bdc9a795adc17f650fe026693e85fbee7d6bcecedc33b63142a0"
+        },
+        {
+          "path": "results/paper7_feasibility_overall.csv",
+          "sha256": "b5bcea64a58c9d9a280d989d68bec30df5fc1fa5e9d3375430b6c38c2f17d2fa"
+        },
+        {
+          "path": "results/paper7_feasibility_report.md",
+          "sha256": "c40736d4e6ad8b57945bb24f10aee72e3e2126d0fcc907a3dcce13f34740ac47"
+        },
+        {
+          "path": "results/paper7_metric_consistency_audit.md",
+          "sha256": "2351d1219b648d7d7b01cda7988ea2bbb8c86d6364a8ba24459baf9bf8c011bc"
+        },
+        {
+          "path": "results/paper7_qwen_candidate_evidence.md",
+          "sha256": "c67529144573da691096956641a19694e6819f03ad99b74d3189d98e55fdd00a"
+        },
+        {
+          "path": "results/paper7_replay_ablation_robustness_evidence.md",
+          "sha256": "8c7458e2d99214ca6c1f42f81a42fe184ba9fea8e9bdb918acbd8a76dca122fd"
+        },
+        {
+          "path": "results/audit_records/qwen_qwen-plus_guarded_audit_records.jsonl",
+          "sha256": "dc6b8d2e9c7eaf83a2a64b342e4779fcccf316d19a4f5e350cba8652b19cf0c1"
+        },
+        {
+          "path": "results/audit_records/qwen_qwen-plus_guarded_audit_summary.csv",
+          "sha256": "cf2dc7e8501c66762ee166e81ca954b71d18602e98cf5a3a36c6ef4c26311dbc"
+        },
+        {
+          "path": "results/audit_records/qwen_qwen-plus_guarded_audit_summary.md",
+          "sha256": "9f75eb8d1d71fc1b9058af447319d8b0c5c55c4722c763cff814d4eb96ea8f94"
+        },
+        {
+          "path": "results/audit_records/qwen_qwen-turbo_guarded_audit_records.jsonl",
+          "sha256": "bfcaee6e015557bb4fd6fdaa4c84a4b7ac8db68dffe7d96d11fc06c3a129da42"
+        },
+        {
+          "path": "results/audit_records/qwen_qwen-turbo_guarded_audit_summary.csv",
+          "sha256": "5bb1f0930a4a1f937379a0348fcd42161ccd7e57decd6525a17a49f49a5c18a7"
+        },
+        {
+          "path": "results/audit_records/qwen_qwen-turbo_guarded_audit_summary.md",
+          "sha256": "5c67d54cefeec16c300a42d84a9761bdd094b20c17ff0ca5206eee8e5651e810"
+        },
+        {
+          "path": "results/compositional_scaling/compositional_scaling_by_scale.csv",
+          "sha256": "f41e424599136e59cfa2699da03b87718c62ef97dd926236ee054c9d63ea8ffd"
+        },
+        {
+          "path": "results/compositional_scaling/compositional_scaling_overall.csv",
+          "sha256": "e33b5fc26e1d1461b9a001de9242cefccf41074d9acb604c01d5c2c673006e41"
+        },
+        {
+          "path": "results/compositional_scaling/compositional_scaling_raw.csv",
+          "sha256": "d06a4bbac7a58e6e798e1d9101c85b0d5f1c404d9d1f93a39a28ccdf7571d616"
+        },
+        {
+          "path": "results/compositional_scaling/compositional_scaling_report.md",
+          "sha256": "14bc6eb90b483509c804fd743ffca182d9e9739e7731ff84136e5add81013322"
+        },
+        {
+          "path": "results/compositional_scaling/qwen_variant_policies_k60.jsonl",
+          "sha256": "b1f71bc332415e9530d05a53c2fafa1babdb49e2d67ae27e3adf95e8ebf0de86"
+        },
+        {
+          "path": "results/compositional_scaling/variant_llm_k60_raw.csv",
+          "sha256": "4e33e441dd3761fdb356a36895f78a9950171a117f979237ea8a96c9b6a7950e"
+        },
+        {
+          "path": "results/compositional_scaling/variant_llm_k60_summary.csv",
+          "sha256": "1ca6314011af400e8a6d00b560eef7c8516168d38f1266c3a36b71a5517a6810"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_adaptivity_by_archetype.csv",
+          "sha256": "ca23d58f17f2861cfa4015d4f4444d8034f1a0dc3adfb011fbcf4f6c9a40d8b3"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_adaptivity_overall.csv",
+          "sha256": "1f3e8b3d4565473af72bf438b36b1d8d597aa06cdefd86df1a206a7df4722e64"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_adaptivity.csv",
+          "sha256": "7a3afdd0ca9f33cd3097293c4a6fd4d9bef0121eaf7b9b49c88eb5190138e3e2"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_by_archetype.csv",
+          "sha256": "7afd60edc7ebbd2808c4a68a4340ab34c1f970c4b68f5cc805662c45d49f6faa"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_by_mission.csv",
+          "sha256": "fbf2c4fdfba60bf43ef04e3ee85e851535de1544c74d290c4fa9859f6f1c0115"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_overall.csv",
+          "sha256": "962c5dec366656bcd36a598444d45357632a7c9d001419d8dd96da294dfe16b1"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_paired_advantages.csv",
+          "sha256": "670f9b8449d1ad63e3846267773e7706ffd863b190c4147cfd14339cdd4ecd1c"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_raw.csv",
+          "sha256": "d9c89f1575df3ae20443b41f3f6e3888f28944d1f3175de635e3f2f11569e342"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_report.md",
+          "sha256": "a27b48a742d5b8c8be80e20fda7756253c1bfa24cbecbea53fbd9540b34225f5"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_semantic_pressure_by_archetype.csv",
+          "sha256": "940737baf6be28a0da9e1e90616a2c517720e909dce368b1de07035f4f8b05d6"
+        },
+        {
+          "path": "results/crossed_mission_posterior/crossed_mission_posterior_semantic_pressure.csv",
+          "sha256": "977a794c184b3a9e5a9b992ba3fb9ac1022c8828d606c178d197f25c87090f27"
+        },
+        {
+          "path": "results/llm_necessity/challenge_mission_intents.jsonl",
+          "sha256": "fa4dddbb5cb8a3e1d1bf609b20c787383989065639209140368fd926bc5715eb"
+        },
+        {
+          "path": "results/llm_necessity/challenge_qwen_plus_intent_compilation.jsonl",
+          "sha256": "82810d83b59ffc50770cb566768e31a5698123712d25d93d19c69eb2d8c415a5"
+        },
+        {
+          "path": "results/llm_necessity/challenge_qwen_plus_policies.jsonl",
+          "sha256": "2b12a0182daca80341fc8b915b7549754c7c22c2cb7ae30e7bd89bcf082c8e78"
+        },
+        {
+          "path": "results/llm_necessity/intent_compilation_by_mission.csv",
+          "sha256": "ff0acf65df9d0e3a4cb2dfffdb058dae7b3054fbede0c32b7d0928461966d1af"
+        },
+        {
+          "path": "results/llm_necessity/intent_compilation_overall.csv",
+          "sha256": "475bee75d6d5598bac4aa298f5f4844e0698603afa6d32f1a4904b67c1ad6227"
+        },
+        {
+          "path": "results/llm_necessity/intent_compilation_raw.csv",
+          "sha256": "50bcbe9998b0a2e7dda908bf3e117df482074fc8d28fed985bba9952d8af9098"
+        },
+        {
+          "path": "results/llm_necessity/llm_necessity_by_family.csv",
+          "sha256": "5d76b2e5f8b86e8854a20eb60809d5847ea538190ce9e6138adb1033c088a5d9"
+        },
+        {
+          "path": "results/llm_necessity/llm_necessity_by_mission.csv",
+          "sha256": "97bc2da26f2404d037a7499e2dcbf6aebf268011b5a5a2469d9a79c513adbc3e"
+        },
+        {
+          "path": "results/llm_necessity/llm_necessity_overall.csv",
+          "sha256": "f1ceeefe544c58b35f59cf3eb64714b7bcf1191ac5b47d0d5f7f6807f4b577f7"
+        },
+        {
+          "path": "results/llm_necessity/llm_necessity_raw.csv",
+          "sha256": "213a2172e4baa43de99937b3c6ec1fdb200d43faa69504635cdc959b1af9b4ad"
+        },
+        {
+          "path": "results/llm_necessity/llm_necessity_report.md",
+          "sha256": "5310261b322b00e9254ec63db574146c592b1eb37ac01cdbc5d50e3878bf1c70"
+        },
+        {
+          "path": "results/llm_necessity_v2/necessity_v2_by_family.csv",
+          "sha256": "17f83224fbd2197451fb995cd7ddc82f9e67147aa5f03dd30b6e4c9c22dadf33"
+        },
+        {
+          "path": "results/llm_necessity_v2/necessity_v2_by_mission.csv",
+          "sha256": "097e8fa94097e28ba94c71beb2fc1fe6b76c05a2b2b8eca1c1663601af8531f9"
+        },
+        {
+          "path": "results/llm_necessity_v2/necessity_v2_overall.csv",
+          "sha256": "b9d404047115aab91ba423573b9604e5f57fd48ae7590b75e236262058e91a03"
+        },
+        {
+          "path": "results/llm_necessity_v2/necessity_v2_paired_tests.csv",
+          "sha256": "9fa7e47c7f459e11515c64c07502846d9f6ec2af3da429b4244aa6bcdc561fc2"
+        },
+        {
+          "path": "results/llm_necessity_v2/necessity_v2_raw.csv",
+          "sha256": "020e5297e7fbb3333fb92df8512ef19609716736a39de84855bf228f5d8a7742"
+        },
+        {
+          "path": "results/llm_necessity_v2/necessity_v2_report.md",
+          "sha256": "2a5bee3567aef40c567bb9ba6f84ffa39ff532acc66aee6583470e1b44111184"
+        },
+        {
+          "path": "results/llm_necessity_v3/challenge_ood_qwen_policies.jsonl",
+          "sha256": "3c036c66cdb71f340adeda68cac27fa694063d42edc5b2150005fba710140b6b"
+        },
+        {
+          "path": "results/llm_necessity_v3/necessity_v3_paired.csv",
+          "sha256": "96e04e4fa736a7ee0b89449da83f128c547724cfd5f480d150c162b32ae24d01"
+        },
+        {
+          "path": "results/llm_necessity_v3/necessity_v3_summary.csv",
+          "sha256": "4587747c2395653152c5dfe76cd959820cdef6db3ef53376816af9a5cdd57ca0"
+        },
+        {
+          "path": "results/ood_mission_semantics/ood_embeddings_cache.json",
+          "sha256": "81568bf024a67762c646ceb251706b02578e6246f3468dd36a6fa73c02e52b2c"
+        },
+        {
+          "path": "results/ood_mission_semantics/ood_mission_semantics_by_mission.csv",
+          "sha256": "0c48085067178fdd0d27aab5f66d978bfe9ca71e0ff94251546c8087fe7be894"
+        },
+        {
+          "path": "results/ood_mission_semantics/ood_mission_semantics_overall.csv",
+          "sha256": "d9a82224fb6a45532c5ac8dc791ee287290d6f4d70662793a1317b91092149a2"
+        },
+        {
+          "path": "results/ood_mission_semantics/ood_mission_semantics_paired_tests.csv",
+          "sha256": "c47fa8dc79ba2819ea87f2a0f537744f85c81e685c6fb67360d7ba5451fae16f"
+        },
+        {
+          "path": "results/ood_mission_semantics/ood_mission_semantics_raw.csv",
+          "sha256": "d2f68e632f8e6dfa027a77692025c588446eb2af8b69ab2b81025e4c852175b1"
+        },
+        {
+          "path": "results/ood_mission_semantics/qwen_ood_policies.jsonl",
+          "sha256": "a4500711776ae19d84ec20e187443bb4898e175a4c2fac15ef8c33d1e80450a2"
+        },
+        {
+          "path": "results/required_experiments/exp1_full_library_by_mission.csv",
+          "sha256": "fa2909ce21e3cbbe0d08532cfaf41f6a5bbd474292bdc8d0b728a7bd27761d25"
+        },
+        {
+          "path": "results/required_experiments/exp1_full_library_overall.csv",
+          "sha256": "afe73a4b79064be29a534becb73bcf18833f7ee2140ed3841170fae571bca6b3"
+        },
+        {
+          "path": "results/required_experiments/exp1_full_library_raw.csv",
+          "sha256": "f1fb25cf7f497512c401f54618ac6a6b7c9ed0fd6d3b44efa3a274a97e9932f6"
+        },
+        {
+          "path": "results/required_experiments/exp2_mission_semantics_by_mission.csv",
+          "sha256": "2ccef5803a42e87f5b11fa8e93909be9fa38dd4f2cf29ec37bdc53f92e53c198"
+        },
+        {
+          "path": "results/required_experiments/exp2_mission_semantics_overall.csv",
+          "sha256": "043bd7dedb2a48113c14d769e532d6989f433c40a688f8fadf0023338d8b850e"
+        },
+        {
+          "path": "results/required_experiments/exp2_mission_semantics_raw.csv",
+          "sha256": "b82c22348ba90aefa1b83ebad9e25e4eed495450a7543ecd6f3f6bb8a3b64304"
+        },
+        {
+          "path": "results/required_experiments/exp3_entropy_bins_overall.csv",
+          "sha256": "cc93d4bdc95f63a5aceb4c44a3c4928b4a2cdb1de07cf4f7d244238b4eb77e89"
+        },
+        {
+          "path": "results/required_experiments/exp3_entropy_bins_raw.csv",
+          "sha256": "f803bbc31da3e174d7603172a88caa8b1dcf039e77d914634999fe895b715005"
+        },
+        {
+          "path": "results/required_experiments/exp3_posterior_flattening_overall.csv",
+          "sha256": "6349b1243fdbd826f07717fb54641a97e353fe9c0e40d2556b760abdbf5d63bc"
+        },
+        {
+          "path": "results/required_experiments/exp3_posterior_flattening_raw.csv",
+          "sha256": "80907b7d3ea256c1c8b73d6725ba3e8a5d2dac213c62e4650db9e827ac2fe1d2"
+        },
+        {
+          "path": "results/required_experiments/exp4_mission_family_breakdown.csv",
+          "sha256": "9ff45cdfff863a2ae501ca933adc0e6b359ce694e0ec26b60fefd7d8146e4d24"
+        },
+        {
+          "path": "results/required_experiments/exp5_unsafe_stress_by_mission.csv",
+          "sha256": "0d5aa67bd2294e0c3dc6887623b387c8cf44eaa735b308454a376fb8f1884e55"
+        },
+        {
+          "path": "results/required_experiments/exp5_unsafe_stress_overall.csv",
+          "sha256": "e0a46bd490c86e0f11398982eeafb5d71a96fcc259f57d7aa9024ea281394505"
+        },
+        {
+          "path": "results/required_experiments/exp5_unsafe_stress_raw.csv",
+          "sha256": "b66631a0d90e3f350b071ccfefdad7965211395f2cf83f7ef4d5c136603a7bbe"
+        },
+        {
+          "path": "results/required_experiments/exp6_second_model_robustness.csv",
+          "sha256": "9634ef5e2190057528a1fcba0dd449a55a0fa4c4f473e3345d992fa0ff88a45d"
+        },
+        {
+          "path": "results/required_experiments/exp6_second_model_robustness.md",
+          "sha256": "903d654568dbe658f853dc0dda6c9ccadbe1a780d6d3ac09c5b80bef14ea2525"
+        },
+        {
+          "path": "results/required_experiments/paper7_required_experiments_1to5_report.md",
+          "sha256": "8d8fb79b9c842e13588d24b757e1cbba91567851f227cbe8f701ec354b59a7b6"
+        },
+        {
+          "path": "results/run_manifests/qwen_qwen-plus_guarded_run_manifest.json",
+          "sha256": "f5176e8bcce4649efb144fc2f4cb9f4d5ed300822efde3530d831fc41a572581"
+        },
+        {
+          "path": "results/run_manifests/qwen_qwen-turbo_guarded_run_manifest.json",
+          "sha256": "a0bcfc4655092a9aad02f8b6c65366da49d0fd0c994f1560d145c4d97dbc275a"
+        },
+        {
+          "path": "results/statistical_tests/paired_tests_report.md",
+          "sha256": "b5560a240f9a4dfe4e6a4e64f2b66b8eb169331a1216d12cdca2945f4b1b96b7"
+        },
+        {
+          "path": "results/statistical_tests/paired_tests.csv",
+          "sha256": "8f3ecdc0104c238c70ba179f9c2300c38f876fa218945c1217618161ccb98b0a"
+        },
+        {
+          "path": "results/trace_driven_case_study/trace_case_study_action_mix.csv",
+          "sha256": "fefa75e413cdc2a65c361aca09ab4720de417b179b2c28004bfae8c7040d74be"
+        },
+        {
+          "path": "results/trace_driven_case_study/trace_case_study_metadata.json",
+          "sha256": "14c442e6a73db920057194d0f918e2d6495e140fece07977c6bbed58b5a9344e"
+        },
+        {
+          "path": "results/trace_driven_case_study/trace_case_study_raw.csv",
+          "sha256": "3dc4387f3fe50d760a5cf52fe564b9ea5153ae68c1211c2905904ee239b460a5"
+        },
+        {
+          "path": "results/trace_driven_case_study/trace_case_study_summary.csv",
+          "sha256": "61bd4003355b7deecc6ded11a6df5fd3b628451c1822363dbd1b45b586d20262"
+        },
+        {
+          "path": "results/verifier_certificates/qwen_qwen-plus_guarded_verifier_certificates.jsonl",
+          "sha256": "6ea745040b7024db7d634757ae8be48888dd6d6e5433815fb436a55c024bdb25"
+        },
+        {
+          "path": "results/verifier_certificates/qwen_qwen-turbo_guarded_verifier_certificates.jsonl",
+          "sha256": "ea05ef030ca764fb2ac0d7276995f28fe44100cfa582682d26c58d13b33af312"
+        },
+        {
+          "path": "llm_runs/mock_mock-v0/dry_run_prompts.jsonl",
+          "sha256": "583ae31c18aa7b163f9dacb6154af091b4ffda68d5a662bb5a18597f857cf051"
+        },
+        {
+          "path": "llm_runs/mock_mock-v0/llm_candidate_by_mission.csv",
+          "sha256": "3b276eb254e74e9dafa7e2c1fb0007be8fcdeb4b1ffeabced11e85429fd2b647"
+        },
+        {
+          "path": "llm_runs/mock_mock-v0/llm_candidate_overall.csv",
+          "sha256": "0e89b09054d29b30aedf887e38e3cc332424580412d1312b1ac54737581e1e8f"
+        },
+        {
+          "path": "llm_runs/mock_mock-v0/llm_candidate_report.md",
+          "sha256": "666abc025101e8f6a20c2a147a1a3a88cfa739ffbf4ec9bd10f2df1a3593be33"
+        },
+        {
+          "path": "llm_runs/mock_mock-v0/policies.jsonl",
+          "sha256": "eca83d46fd857ac0c44061c391542962e79a122783d093d8d9dcfa3cbe78123c"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus/llm_candidate_by_mission.csv",
+          "sha256": "c2f2dce737c74947cd8319f5c2ab1d01dd3d655681c3e38dbfc602947e566ab7"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus/llm_candidate_overall.csv",
+          "sha256": "87114791485dc609f521cad2992aa28452396456a00fab26014e53e895ffeb5e"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus/llm_candidate_report.md",
+          "sha256": "e1c643a2949ffd42eb9dc5fc7a8153912a9f26adca98f00698e837f988a824eb"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus/policies.jsonl",
+          "sha256": "e4d059df1369ebb959247016ecf598273dfdebfd597318cb8d753f54460afe05"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus_temp0/llm_candidate_by_mission.csv",
+          "sha256": "2b6be872e8dbfe0798e1f39acb06a5fafe230f5c445529ac6462e834aa4d38af"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus_temp0/llm_candidate_overall.csv",
+          "sha256": "036828d8858bc918861976e743a77a08b2787d7091fc972316c1019766dd90a4"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus_temp0/llm_candidate_report.md",
+          "sha256": "7a643ca85f0860f3027a00026fe373c184b2171506b56fb69a9d9302e7bd1c5a"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus_temp0/policies.jsonl",
+          "sha256": "f3c1ceb86ad390bc83fefde97e312e0870a79304c12c625dd10b571278e8da4b"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus_temp07/llm_candidate_by_mission.csv",
+          "sha256": "29684fb40360cdb1c75f34f4a59325c9f9383b7d137c387886c3dac0acebd118"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus_temp07/llm_candidate_overall.csv",
+          "sha256": "b9abb4873e6dcd8fd30149b387662299657befaf74d9eeb6efe241d61a311028"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus_temp07/llm_candidate_report.md",
+          "sha256": "e9f5ebc6334347ce96862ae8cc9aefc98011ec40a3520625c920d773c01cd833"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-plus_temp07/policies.jsonl",
+          "sha256": "c818aff0028727daf6b49c7546f8f61305d06a62b4def7d0397036507cb8d938"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-turbo/llm_candidate_by_mission.csv",
+          "sha256": "f19c734d175de2cf08f86d8cebf73c5b4d3e2f866276305481992895d60ecc83"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-turbo/llm_candidate_overall.csv",
+          "sha256": "3008733bb95041787f99161f40c6e4eeff61091c32356de7859ec24b478a0fe6"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-turbo/llm_candidate_report.md",
+          "sha256": "9e4d65e65ee1dae180470fa778f4ea645e4dae2b9ed4ac56f0975622eff6e771"
+        },
+        {
+          "path": "llm_runs/qwen_qwen-turbo/policies.jsonl",
+          "sha256": "9ad15eabd4a7ae09b139e13f9e72cd150e98e3e8ae7bd07c217b0ff4aabe03d9"
+        },
+        {
+          "path": "llm_runs/replay_qwen-plus_ablation_replay/llm_candidate_by_mission.csv",
+          "sha256": "c2f2dce737c74947cd8319f5c2ab1d01dd3d655681c3e38dbfc602947e566ab7"
+        },
+        {
+          "path": "llm_runs/replay_qwen-plus_ablation_replay/llm_candidate_overall.csv",
+          "sha256": "87114791485dc609f521cad2992aa28452396456a00fab26014e53e895ffeb5e"
+        },
+        {
+          "path": "llm_runs/replay_qwen-plus_ablation_replay/llm_candidate_report.md",
+          "sha256": "6f8bce37ab455a0e95e99c5a4c702c7a1b68e510cc602e461b2cd235781ec8b2"
+        },
+        {
+          "path": "action_library.json",
+          "sha256": "5509f1a4a95c6d094603a3d7bcd9d505be6d0abba3226ef6e0d2c8c0d24640ca"
+        },
+        {
+          "path": "gold_cost_profiles.json",
+          "sha256": "9d0540667d0575e9bf2374fca333e05a330d3934147c5b538a26439f54374988"
+        },
+        {
+          "path": "mission_intents.jsonl",
+          "sha256": "d752973120b680be373d4bdc6580b26c645aeffa4d701e4be1c4eff054513ba8"
+        },
+        {
+          "path": "ood_mission_intents.jsonl",
+          "sha256": "bfbdb70209461f65533cfa76ca85b50cd8decbdc5e3c660de31d2a31b25ad563"
+        },
+        {
+          "path": "paper7_agentic_feasibility.py",
+          "sha256": "37314c19d31ee16c80df9649d7e0ae6357251d94b89dcb8aaaa661437b7aca3a"
+        },
+        {
+          "path": "paper7_compositional_scaling_experiment.py",
+          "sha256": "70d92c172e6fae8be14519917b5a68f62bac343fa21f656512d09ceb08964452"
+        },
+        {
+          "path": "paper7_compositional_variant_llm_experiment.py",
+          "sha256": "a1f84cfe7feec7b8068e00c8a9aad20cc3148e76e4bfd3730d087d161faa8de2"
+        },
+        {
+          "path": "paper7_crossed_mission_posterior_experiment.py",
+          "sha256": "9134e250d34c53c89e6cf6201fc4d362d3f853c32d227bc3442ef25b5ec94692"
+        },
+        {
+          "path": "paper7_export_audit_records.py",
+          "sha256": "c1886c8e647ac87bd649934b5c25dc480259d87cc49a87098845fa0cdbebe974"
+        },
+        {
+          "path": "paper7_failure_mode_experiment.py",
+          "sha256": "3d4b51adb11b6e0c39dd48f84c141cae417fde1ed4edc27135817eeb0d972567"
+        },
+        {
+          "path": "paper7_llm_candidate_experiment.py",
+          "sha256": "91e669fe80a924595732813665e4e681a7e177715302ac471724aae192dfaab1"
+        },
+        {
+          "path": "paper7_llm_necessity_experiment.py",
+          "sha256": "ccadc9e96172da3f0f16de513520ba3c0bebd880537cceba4e98062fd05313d7"
+        },
+        {
+          "path": "paper7_make_experiment_figures.py",
+          "sha256": "a1d2738879eb91ab3e8ab31e93431cc1457d6142b9202953ad9fc4c8581843b1"
+        },
+        {
+          "path": "paper7_necessity_v2_experiment.py",
+          "sha256": "bc2a0f114a20f298a0681461ab5dc358a33c215341027da0a8bb1dcbb1e25cbc"
+        },
+        {
+          "path": "paper7_necessity_v3_experiment.py",
+          "sha256": "0c146a2fb4043c628bf78f4fabf3d9b55933b428011d4b484506aa54bba7cfc7"
+        },
+        {
+          "path": "paper7_ood_mission_semantics_experiment.py",
+          "sha256": "7cb1b20d46c5154979220d2f3d60264319bc795f427ce6073f930b6eaea72d97"
+        },
+        {
+          "path": "paper7_recompute_llm_replay_metrics.py",
+          "sha256": "42a738ad9c01329d50f89ab5217abee577278b75fc2660c5f120d9ca57031919"
+        },
+        {
+          "path": "paper7_required_experiments.py",
+          "sha256": "3c351f4544e5dd4e68867e1ac9eb66bf9aaa56a940f585893b54e29ae16ea5b5"
+        },
+        {
+          "path": "paper7_statistical_tests.py",
+          "sha256": "292419baf5a77be8ad9f702746d53fa3aa8787b9d7b475d2c9e705a56034ed9a"
+        },
+        {
+          "path": "paper7_trace_driven_case_study.py",
+          "sha256": "3898979350bfaf8e85c92f7b2fd462567c1ecc64f2478034482f362af0dddf8e"
+        }
+      ],
+      "excluded_members": [
+        {
+          "path": "results/paper7_manuscript_numeric_consistency_audit.md",
+          "bytes": 39114,
+          "sha256": "24ba603d9fa7329d33114cb9efd8325407c9a0028f391321d67ba2e8ea1e419e",
+          "reason": "Manuscript-source numeric audit or its generator, not the numerical experiment source."
+        },
+        {
+          "path": "paper7_manuscript_numeric_audit.py",
+          "bytes": 24681,
+          "sha256": "35cfce60835978cb7a9dcdb3129ceb1cee7f44661fea0d94330d2f01a5e139d8",
+          "reason": "Manuscript-source numeric audit or its generator, not the numerical experiment source."
+        }
+      ],
+      "documentation_derivatives": [
+        {
+          "path": "results/paper7_failure_mode_report.md",
+          "container": "supplementary/paper7_reproducibility_package.zip",
+          "original_sha256": "174c499293f9f9dd6d8140141d5ca74f92d01b96ad5281d3b68162e2084f603e",
+          "public_sha256": "749bef9cb8574a48c756da63a3297c9a1e0300f21e98cf80519aceaacf3a0174",
+          "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+          "original_bytes": 5962,
+          "public_bytes": 5655,
+          "table_rows_original": 21,
+          "table_rows_public": 21,
+          "table_prose_rows_changed": []
+        },
+        {
+          "path": "results/paper7_feasibility_claim_evidence.md",
+          "container": "supplementary/paper7_reproducibility_package.zip",
+          "original_sha256": "8e595d03d7a26bb2e090c6cdaa6203f75aa1525d1b2adbbc01c7218c04b35360",
+          "public_sha256": "c30be9003a0efa8f2cce5d5a399c2b04b824ee61fb4a59b177056d06b301c987",
+          "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+          "original_bytes": 4109,
+          "public_bytes": 3607,
+          "table_rows_original": 0,
+          "table_rows_public": 0,
+          "table_prose_rows_changed": []
+        },
+        {
+          "path": "README.md",
+          "container": "supplementary/paper7_reproducibility_package.zip",
+          "original_sha256": "4fe173f87375cae2d39ec3ae84f6b7a2c5ebad2de1c8be2893c78907f78138fa",
+          "public_sha256": "2a7380246e3d56b6dbd75256b1149c3015ec7a5d0956d7a38eb4b8dc4425869d",
+          "reason": "Public prose derivative: remove internal manuscript/reviewer instructions; preserve scientific methods, scope, chronology and all outcomes.",
+          "original_bytes": 12482,
+          "public_bytes": 12502,
+          "table_rows_original": 0,
+          "table_rows_public": 0,
+          "table_prose_rows_changed": []
+        }
+      ]
+    }
+  ]
+}

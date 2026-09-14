@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying article when using these reproducibility materials."
+type: software
+title: "Guarded Mission-Conditioned Posterior Intervention Planning for UAV-IoT Applications: Reproducibility Materials"
+authors:
+  - family-names: Feng
+    given-names: Li
+  - family-names: Pei
+    given-names: Zhenzhen
+version: 1.0.0
+date-released: 2026-09-15
+repository-code: "https://github.com/ermalimust/jnca-uav-iot-reproducibility"
+url: "https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/tag/v1.0.0"

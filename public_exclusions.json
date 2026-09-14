@@ -1,0 +1,377 @@
+{
+  "scope": "Publication boundary. Original scientific results are retained regardless of outcome. Historical missing files are explicitly reported, never counted as reverified.",
+  "files": [
+    {
+      "path": "JNCA_handoff_capacity_replay_20260914.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 1812,
+      "sha256": "31fce12e4e0bde19d8547ccd7185f6c2103c40bdaa72d0b6bc171f2e7a0eb5a5"
+    },
+    {
+      "path": "JNCA_handoff_capture_contract_20260914.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 2431,
+      "sha256": "9aca7c4c03bf71a3fba91c141aaf7bdada740c23aafbc31cbbb670a7036b8137"
+    },
+    {
+      "path": "JNCA_handoff_observation_adapter_20260914.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 1301,
+      "sha256": "2ef41ef1f24d1851778352d1c9ec82da8a8db3e324e9cd28073e7b6003d421a6"
+    },
+    {
+      "path": "JNCA_handoff_spatial_capture_20260914.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 1783,
+      "sha256": "d1241c653406201d73e1ec6fa24d1e05d1449cc5a4acd88d06964c52799672c0"
+    },
+    {
+      "path": "JNCA_handoff_wichoose_service_20260914.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 2052,
+      "sha256": "bb156d04065b3f5ced83cf795fec75e0de58c74d9587054829af39a907a4a580"
+    },
+    {
+      "path": "output/capacity_replay_20260914/evidence_integration.md",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 2117,
+      "sha256": "b81fcca90db3139392d113530025cd3048c29fc9d94fd9c1364a46b211dfa9bf"
+    },
+    {
+      "path": "revision_work/analysis/exact_joint_action_radius_20260912/integration.json",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 2859,
+      "sha256": "569d72e37b430a1a2f4721aafd3f5a6c7d39a33dec93156d3a04fcc4f8a78eb6"
+    },
+    {
+      "path": "revision_work/analysis/exact_joint_action_radius_20260912/proposed_A5.tex",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 2356,
+      "sha256": "0a0cd437360d668737c8ac85809f3c1be8b496e45aa7cf9f40c64c9e77213569"
+    },
+    {
+      "path": "revision_work/analysis/exact_joint_action_radius_20260912/proposed_R7_response.tex",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 2337,
+      "sha256": "d0d7040e6b84b129cbdb44d48e53a9a2a7b4308cb8ef7763e121d99750e76cee"
+    },
+    {
+      "path": "revision_work/new_experiments/P11_react_reference_20260912/A17_protocol_skeleton.tex",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 3015,
+      "sha256": "5e8b3b0e537723447bf3dee8dbf1f94b01bde7717cbd129fd2378e2345333e73"
+    },
+    {
+      "path": "revision_work/new_experiments/P11_react_reference_20260912/R1_C5_full_response.tex",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 2386,
+      "sha256": "880dbb528d4054d8d06dc7ad6f1302ee10c07a0f3cb9f556e1feca2cd28e51f6"
+    },
+    {
+      "path": "revision_work/new_experiments/P11_react_reference_20260912/R1_C5_response_skeleton.md",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 1440,
+      "sha256": "99a49719923b24e0f4f1abb89a9eda6c2bad668b98dd0ef6e451a732fc90b9f5"
+    },
+    {
+      "path": "revision_work/new_experiments/P11_react_reference_20260912/integration.json",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 2062,
+      "sha256": "0ff7a2c2e1f0b120b8160099ddcbaafb3e394fb5c99563a2814dd31fe5d435ba"
+    },
+    {
+      "path": "revision_work/new_experiments/P11_react_reference_20260912/write_final_evidence.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 16741,
+      "sha256": "de780700b16c50f68de3a97788c61ffdfd31f0ac4bc8feddfa21e9a37c5c05da"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_design/final_delivery_seal.json",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 3342,
+      "sha256": "ce5b99b47383b2d4a544923b34d91dda743704d2420d967a2b05ec0fe6fb54bd"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_design/final_delivery_seal.md",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 1161,
+      "sha256": "cd27f38fec35fba01dee67a05e0ecb6917dc875c17215a0f694db7a550742b39"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_design/independent_design_evidence_20260914.zip",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 58956,
+      "sha256": "17705aad069f62933c6245b5401772c45883600ca27c681213f7e7f386bb19d2"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_design/manuscript_response_scope_audit.json",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 9239,
+      "sha256": "0f51b409c7c547d9ac08f9b5f7b7f05153438cbfca5d9e05f0cc2fd18b072282"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_design/manuscript_response_scope_audit.md",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 7476,
+      "sha256": "9315fd35442d8ee27c197b592209de8233a1df5550d0b3795bee1eef7ab4c20b"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_design/seal_final_delivery.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 9169,
+      "sha256": "a19b0843ed39eec0e98e0ba8d76defcd83c4fe39675773000fc6459d74055150"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_design/write_scope_audit.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 14330,
+      "sha256": "5ac860f09f30056822e8f683e8e7e60114eb338d4e1119bba1b40623d7daf2ae"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_statistics/audit_integrated_statistics.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 9468,
+      "sha256": "c765ce202c9bc9aedab37b26d39cf952266fe21f7b24ca9854403d180cd43afa"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_statistics/editorial_rounding_check.json",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 2404,
+      "sha256": "2e7a74af3f64d99b2c6b4f681844db6a46a413839275425f66ea4142dc9a853f"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_statistics/integration_locator_report.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 5354,
+      "sha256": "a74e6f0967b0633bd220ccad0c006f70ed0148d9f4015aac9c71af847c41b5cf"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_statistics/source_integration_locators.csv",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 34254,
+      "sha256": "0d6358a69f0349b9653253ef2f34aca84eb0ea0615343ce380e837ac5065ba3f"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_statistics/source_integration_report.md",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 8817,
+      "sha256": "ddef58cc3e5e6cc748f0348e2e3af1a872c90216ba06504c9d1f5aaa1f017d51"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/independent_statistics/statistical_editorial_audit.json",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 8475,
+      "sha256": "a53f62786d011381e860ff3b3854d6b641a90092edab19df731559ee85a1fa3e"
+    },
+    {
+      "path": "revision_work/new_experiments/P19_ns3_policy_validation_20260914/independent_statistics/write_statistical_handoff.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 7662,
+      "sha256": "c57e8ce2ff8f8374bbab50bd356b61b47bd333dee85af5ac2ee010b7c078b049"
+    },
+    {
+      "path": "revision_work/new_experiments/P20_observation_adapter_20260914/build_report.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 17030,
+      "sha256": "d0534f62655d01b59aea196d7c544a2310d5e28f029b29dcccaec4db316ebcc5"
+    },
+    {
+      "path": "revision_work/new_experiments/P21_spatial_capture_20260914/build_report.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 20289,
+      "sha256": "ce07b6cbdf30ceaf6bec19eec25bcef1b7640c128678e25375de51db8baa9c94"
+    },
+    {
+      "path": "revision_work/new_experiments/P21_spatial_capture_20260914/final_checks.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 2925,
+      "sha256": "6f0e74227c2051ec6d05a0ad2e6c2afea6b4be57b13c50ff4a17efb597a6e923"
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/build_report.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 17330,
+      "sha256": "cbbb32c6b7532f059a42485b6d9a6056e01bd9706703e5ace2f7354211896962"
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/final_checks.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 5816,
+      "sha256": "7eb539b4bcee5b941d99eebd5780e99366a97adb4b7edace25949951857b0539"
+    },
+    {
+      "path": "revision_work/new_experiments/P23_wichoose_service_20260914/build_report.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 19152,
+      "sha256": "9f856798a3952262b9a189391a49afc683f111181a76880745555a2d5a5606ef"
+    },
+    {
+      "path": "revision_work/new_experiments/P23_wichoose_service_20260914/final_checks.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 3854,
+      "sha256": "a04e510d36dc03984064da84ae1b79c0fef11fee04e4bd6dfcbd9359aaf99595"
+    },
+    {
+      "path": "revision_work/new_experiments/P24_capacity_replay_20260914/build_report.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 19112,
+      "sha256": "b3d8df01ee1d8b9a1b0ab9d52e37d612a8e9ff6dd69267e6f00f285e9ed1c444"
+    },
+    {
+      "path": "revision_work/new_experiments/P24_capacity_replay_20260914/final_checks.py",
+      "reason": "Author correspondence or editorial working material; scientific inputs and outcomes are retained.",
+      "bytes": 3849,
+      "sha256": "f37989e59e003f36cc049f5ffce1e2da4621dbee3f3e8d5c6fc204fbcbbc61c6"
+    },
+    {
+      "path": "MEASURED_SERVICE_README.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 4432,
+      "sha256": "d3fd3008d5d7629154373291927ef20e5605013d61e661d3923962b91a8ee1f1"
+    },
+    {
+      "path": "package_manifest.json",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 7908200,
+      "sha256": "9d2b07f886c73ad57987a83ef3b5ba6dea4aaa0e4bef20771bee41e366b21e43"
+    },
+    {
+      "path": "package_manifest_before_formal_integration_20260914.json",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 7369784,
+      "sha256": "db16773b2b96f3637b2c13e88b61e88541e807f991b833d6fb77cf427e735396"
+    },
+    {
+      "path": "package_manifest_before_measured_service_20260913.json",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 657193,
+      "sha256": "6c57dab1edc46a8f123b06264ce7b7c218fb6a055ffd023c3f5b7a3091c9ee40"
+    },
+    {
+      "path": "package_manifest_before_ns3_action_effects_20260914.json",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 670003,
+      "sha256": "d659321633aa142bec1c44f8b97d00071379c8053ecc6c0b997925f3a87bc6ed"
+    },
+    {
+      "path": "package_manifest_before_ns3_policy_validation_20260914.json",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 1613351,
+      "sha256": "361a3cd6976dd56fb3a702ec3f250042b3e3d086302fdeee593aa3fa6aa8efd0"
+    },
+    {
+      "path": "package_manifest_before_posterior_robustness_20260913.json",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 664179,
+      "sha256": "19bf10a8b4ee414f6b573ace2440580ef41dd8ca1c710ce6f3104e8735349c24"
+    },
+    {
+      "path": "package_manifest_before_public_data_20260913.json",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 401930,
+      "sha256": "d291df902514089efafe614fe106a1d2c9a358f53327f4d311a324b2fd94d4b9"
+    },
+    {
+      "path": "package_manifest_reviewer_closure_20260912.json",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 706648,
+      "sha256": "dbcb158b246db93bda61c4383bbeed92f15f49817d70f5719e470245149358c9"
+    },
+    {
+      "path": "README.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 4796,
+      "sha256": "7934aeda641cf674897f5877a1dab46eab4df38953ecda9912c8bf98b7156846"
+    },
+    {
+      "path": "README_before_formal_integration_20260914.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 2259,
+      "sha256": "68ef29a6707c3af2913c6f6679ec5322ac20a1e79641e97320184b1cda3b1c0b"
+    },
+    {
+      "path": "README_before_measured_service_20260913.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 2425,
+      "sha256": "441948cd20a273f97d0f63cdc222ecb19191a5f7ac259222d1854313920644aa"
+    },
+    {
+      "path": "README_before_ns3_action_effects_20260914.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 1373,
+      "sha256": "4dc2c50c94dd8d9c15904e8d9af8a9daf19232a0f44d502e98071735a9a0af84"
+    },
+    {
+      "path": "README_before_ns3_policy_validation_20260914.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 1750,
+      "sha256": "317c76037cb06213f69416f785cc5b36548df217592d8f3ebdaccdfcd4f25851"
+    },
+    {
+      "path": "README_before_posterior_robustness_20260913.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 1502,
+      "sha256": "3828bfed24b7b489cff7174ff52a7c048b3a68fe5a1e80d922392902f06be4e0"
+    },
+    {
+      "path": "README_before_public_data_20260913.md",
+      "reason": "Superseded package-level documentation or packaging inventory; replaced by current public release documentation.",
+      "bytes": 15679,
+      "sha256": "3a9ec2138b6fb87b8df4cabd95f077493a55311856d317c0a7a7b715c63a63cb"
+    },
+    {
+      "path": "revision_work/new_experiments/P18_ns3_action_effects_20260914/build/action_effects.exe",
+      "reason": "Historical platform-specific compiled program. Source, compile receipts and original binary digests retained; numerical replay does not execute this program.",
+      "bytes": 453730,
+      "sha256": "76210b2fcc33a763267b63ca82970734d19ce94ae97da2ec619a1360d0cf57ea"
+    },
+    {
+      "path": "revision_work/new_experiments/P19_ns3_policy_validation_20260914/build/policy_replay.exe",
+      "reason": "Historical platform-specific compiled program. Source, compile receipts and original binary digests retained; numerical replay does not execute this program.",
+      "bytes": 491851,
+      "sha256": "e2718e7d29c4dc68a8c9dc7e682eb9b5666d0c934f628e02fe4a9790d8d25117"
+    },
+    {
+      "path": "revision_work/new_experiments/P20_observation_adapter_20260914/build/observation_adapter.exe",
+      "reason": "Historical platform-specific compiled program. Source, compile receipts and original binary digests retained; numerical replay does not execute this program.",
+      "bytes": 504778,
+      "sha256": "a54a0daa6104ab69db5a93c6930d22a2bb0dd95cbdc9c79a74e5a8b36dd0d415"
+    },
+    {
+      "path": "revision_work/new_experiments/P21_spatial_capture_20260914/replay/build/observation_adapter.exe",
+      "reason": "Historical platform-specific compiled program. Source, compile receipts and original binary digests retained; numerical replay does not execute this program.",
+      "bytes": 511146,
+      "sha256": "da69121ea1593534fcdbc08b78137d4951226036e2b51c2d42f37c0a8d1fdf6b"
+    },
+    {
+      "path": "revision_work/new_experiments/P23_wichoose_service_20260914/build/service_replay.exe",
+      "reason": "Historical platform-specific compiled program. Source, compile receipts and original binary digests retained; numerical replay does not execute this program.",
+      "bytes": 398971,
+      "sha256": "ac82c021bf8dda67597c5f5e2f337ff9f6f7ecaaaf7b48f83fec790df5a09ae2"
+    },
+    {
+      "path": "revision_work/new_experiments/P24_capacity_replay_20260914/build/service_replay.exe",
+      "reason": "Historical platform-specific compiled program. Source, compile receipts and original binary digests retained; numerical replay does not execute this program.",
+      "bytes": 399963,
+      "sha256": "a27cccdc3eb15161704e9efbdcbf9958f75b14891e727959aa86bd956a670b51"
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/comcom2024.pdf",
+      "sha256": "06a6d8bac6938179c82f9523ae17da70d801b956f35c475c58b400d0897f2ddc",
+      "bytes": 7347282,
+      "reason": "Third-party publication or webpage copy. Original URL and receipt retained instead of redistributing the full text."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/comcom2024.txt",
+      "sha256": "4e5b7ad6d9483e22ab2f5f793375c548d1a87911fb1757279495652510405d31",
+      "bytes": 66342,
+      "reason": "Third-party publication or webpage copy. Original URL and receipt retained instead of redistributing the full text."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/author_homepage.html",
+      "sha256": "6d78e31cd35dba1ccabfcc49f676dda8337a0d6fbac4fa7d0f4a6f455b5ead1f",
+      "bytes": 12163,
+      "reason": "Third-party publication or webpage copy. Original URL and receipt retained instead of redistributing the full text."
+    }
+  ]
+}

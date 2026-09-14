@@ -1,0 +1,6 @@
+# Keep archived scientific bytes unchanged across platforms.
+*.md text eol=lf
+scripts/*.py text eol=lf
+revision_work/** -text
+output/** -text
+supplementary/** -text
