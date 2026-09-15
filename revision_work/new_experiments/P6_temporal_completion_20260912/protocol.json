@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "frozen_before_outcomes": true,
+  "purpose": "Bounded action-dependent service-control extension; separate from original static-label evaluation.",
+  "episode_seeds": {"start": 60912000, "count": 96},
+  "steps": 30,
+  "step_ms": 100,
+  "mission_change_step": 15,
+  "modes": ["normal", "W", "B", "M", "V", "WV", "WM", "WBVM"],
+  "mode_transition": {"self_retention": 0.85, "uniform_refresh": 0.15},
+  "observation": {"ordinary_correct_probability": 0.55, "after_observe_correct_probability": 0.90, "other_modes_equal_probability": true, "queues_observed": true, "service_metrics_evaluation_only": true},
+  "parameters": {
+    "nominal_capacity_mbps": 12.0,
+    "c2_arrivals_mbit_per_step": 0.0048,
+    "video_normal_mbps": 2.0,
+    "video_burst_mbps": 9.0,
+    "c2_deadline_ms": 10.0,
+    "video_target_mbps": 3.0,
+    "base_service_ms": 2.0,
+    "video_packet_mbit": 0.012,
+    "wifi_low_busy_fraction": 0.055,
+    "wifi_high_busy_fraction": 0.575,
+    "wifi_relief_busy_fraction": 0.275,
+    "ble_light_fraction": 0.0015,
+    "ble_dense_fraction": 0.4375,
+    "ble_avoid_fraction": 0.1,
+    "mobility_service_fraction": 0.45,
+    "adapted_mobility_service_fraction": 0.7,
+    "video_shape_cap_mbps": 3.0,
+    "fallback_video_cap_mbps": 1.0,
+    "action_duration_steps": 3,
+    "c2_buffer_mbit": 0.05,
+    "video_buffer_mbit": 2.0
+  },
+  "actions": ["Observe", "WiFiRelief", "BLEAvoid", "LinkAdapt", "VideoShape", "FallbackProtect"],
+  "action_overhead": {"Observe": 0.0, "WiFiRelief": 0.35, "BLEAvoid": 0.35, "LinkAdapt": 0.70, "VideoShape": 0.55, "FallbackProtect": 1.15},
+  "switch_cost_settings": [0.2, 0.0, 0.4],
+  "primary_switch_cost": 0.2,
+  "missions": {
+    "inspection": {
+      "intent": "Inspect infrastructure while preserving useful video delivery; avoid unnecessary fallback when video and safety evidence are weak.",
+      "c2_weight": 0.35, "video_weight": 0.65, "video_guard": true, "safety_guard": false, "rid_guard": false
+    },
+    "emergency": {
+      "intent": "Recover emergency C2 service and preserve Remote-ID continuity; prioritize safety over payload video throughput.",
+      "c2_weight": 0.85, "video_weight": 0.15, "video_guard": false, "safety_guard": true, "rid_guard": true
+    }
+  },
+  "utility": "10*(mission_c2_weight*max(clipped_positive_deadline_excess,c2_drop_fraction)+mission_video_weight*clipped_target_video_shortfall)+original_action_overhead+switch_penalty*I(action!=previous_action). Each fraction in [0,1], both mission weights sum to 1; same utility unit throughout.",
+  "guards": {"safety_risk_observe": 0.42, "rid_B_probability": 0.28, "video_probability": 0.35, "video_safety_risk": 0.70},
+  "policies": {
+    "guarded_H1": "Top-two marginal cause repair actions, Observe and FallbackProtect; current belief expected one-step service utility.",
+    "candidate_H2": "Same bounded action grammar at each observed belief-tree node, exact H=2 evaluation and per-step revalidation.",
+    "full_library_H2": "All six actions at each node, exact H=2 constrained belief-tree evaluation. Receding horizon, no future seed/noise access.",
+    "generated_sequence_H2": "Optional fixed sequence_policies.json, separately per generation replicate; first action restricts second action to submitted continuations; next-step guards and mission update applied. Execute first action and replan each step."
+  },
+  "belief": "New categorical belief over mechanism modes, not the original DES cause-label classifier. Eight likelihood outcomes integrated exactly. Action-dependent queues are conditioned upon before mode transition and new sensor observation.",
+  "analysis": {
+    "bootstrap_unit": "episode",
+    "paired_resamples": 10000,
+    "bootstrap_seed": 60912999,
+    "primary": "Episode cumulative service utility difference versus full_library_H2 at switch cost .2",
+    "secondary": ["c2_deadline_violations", "realized_guard_violations", "video_goodput", "action_switches", "ABA_chattering", "post_transition_service_recovery_steps", "mission_version_mismatches"],
+    "reporting": "Two-sided percentile 95% descriptive paired intervals; no selection by favorable direction, no global optimal-regret claim. Per-window full-information minima are never summed."
+  },
+  "interaction": {"conditions": ["00", "10", "01", "11"], "W_and_V": true, "steps": 30, "mechanism_mode_fixed_per_condition": true, "paired_episode_seeds": true, "offered_video_noise": "independent equiprobable 0.9 or 1.1 multiplier per window; same draw for all four conditions and all six policies", "evaluate_all_six_constant_action_handlers": true, "uncertainty": "Episode-level paired bootstrap of interaction contrast. No fitted interaction correction or external physical-validation claim."},
+  "scope": "Finite service queues and controller settings; parameters originating in old config and newly prescribed action effects are explicitly distinguished. No external physical validation or aircraft dynamics claim."
+}

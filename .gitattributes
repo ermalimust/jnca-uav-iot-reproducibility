@@ -1,6 +1,2 @@
-# Keep archived scientific bytes unchanged across platforms.
-*.md text eol=lf
-scripts/*.py text eol=lf
-revision_work/** -text
-output/** -text
-supplementary/** -text
+# Preserve published file hashes on every platform, including documentation.
+* -text

@@ -1,0 +1,8 @@
+{
+  "purpose": "Inspect and correct the video-summary time index in an isolated generator copy; preserve the archived benchmark.",
+  "single_change": "Replace video lookup by retained window_id with int(t_start / global.window_ms), matching the absolute-time video stream.",
+  "controls": "Same JSON, 24 seeds, 90-second duration, packet simulation, features, logistic fitting, saved Qwen rules, costs and guards.",
+  "checks": ["All 120 packet logs must remain byte-identical", "Compare all 16800 source labels and window classes", "Refit diagnostics on corrected nonambiguous training windows"],
+  "decision_evaluation": "Keep the original 54000 archived exposures whose source windows are nonambiguous in both versions. Use corrected probabilities and labels for all methods; compare unverified first candidate, guarded candidate ranking and full-library guarded ranking.",
+  "scope": "Descriptive implementation sensitivity on matched sources. Does not replace primary archived results or establish empirical simulator validity."
+}

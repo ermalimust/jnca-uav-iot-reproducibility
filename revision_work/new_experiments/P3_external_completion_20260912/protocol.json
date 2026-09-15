@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "fixed_at_stage": "After source/schema inspection; before computing RSSI distributions or distances",
+  "objective": "Quantify observable operating-condition differences between the original fixed DES and public measured 2.4-GHz aerial IoT links, with explicit measurement compatibility.",
+  "empirical_dataset": {
+    "doi": "10.25349/D9KS3W",
+    "mirror": "https://zenodo.org/records/4963701",
+    "files": ["signal.csv", "static_transmitters.csv"],
+    "protocol": "IEEE 802.15.4, not IEEE 802.11",
+    "license": "CC0-1.0",
+    "include": "Every signal.csv received-packet record with finite Rssi in the declared positive magnitude representation; no RSSI threshold or favorable-flight selection",
+    "grouping": "Flight_Group is the primary campaign cluster; Run identifies altitude trials; Device and Transmitter_Id identify link orientations and transmitters",
+    "conversion": "rssi_dbm = -Rssi. XBee reports an unsigned magnitude in negative-dBm units.",
+    "observation_process": "RSSI is recorded for received packets, not continuously or for unreceived packets. No missing packet is assigned an RSSI.",
+    "time_rule": "Keep native received-packet timestamps; do not interpolate to 100-ms model windows."
+  },
+  "simulated_dataset": {
+    "generator": "Unchanged recovered generate_scenarios.py and mvp_scenarios_min.json",
+    "split": "Original held-out 3000-series, all eight scenario families",
+    "probe": "Native rssi_at at 20-ms points, t in [20000,90000) ms; factual process only",
+    "reason": "Compare the raw modeled channel variable in dBm rather than confusing 100-ms five-probe averages with individual received-packet RSSI",
+    "calibration": "None; original means, variance, blockage and channel parameters are fixed."
+  },
+  "metrics": {
+    "summaries": ["count", "minimum", "q05", "q25", "median", "q75", "q95", "maximum", "mean", "standard_deviation"],
+    "distance": "Exact one-dimensional Wasserstein-1 in dB, integral of absolute difference between weighted empirical CDFs",
+    "primary_weighting": "Equal weight per empirical Flight_Group and equal weight per simulated scenario, then equal weight per observation within its group",
+    "stratifications": ["Each of all nine Flight_Group values", "All three locations", "Both receiver orientations", "Predefined physical-distance bins [0,75), [75,110), [110,175), [175,400), [400,infinity) metres; report every bin, including bins without a simulated scenario"],
+    "strata_rule": "Distance edges were fixed from the nominal DES distances and measurement context before outcome computation. A DES scenario belongs by its declared distance_m; a received field packet belongs by Real_Distance. These are descriptive shared-distance strata, not matched propagation experiments. Do not pool across radio/antenna conditions to claim equality.",
+    "uncertainty": "Descriptive full-campaign summaries; no iid-packet confidence interval or hypothesis of protocol equivalence",
+    "posterior_distance": "Not estimable: empirical measurement lacks most of the 25 simultaneous input features and simulator-defined four cause contributions."
+  },
+  "interpretation": [
+    "The distance quantifies marginal operating-condition difference, not goodness-of-fit for the same protocol, matched trajectory or censoring process.",
+    "No empirical posterior, calibration-error claim, action-success label, or deployment outcome will be synthesized from unavailable fields.",
+    "All source groups and all declared metrics are reported; no parameter is fitted and no data-driven source exclusion is allowed.",
+    "This public dataset supplies independent measured aerial-link context, not deployment of the proposed decision framework."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-12",
+  "kind": "read-only source provenance and catalogue audit; deterministic replay of archived code and policies",
+  "original_inputs": "02_原始實驗備份/paper7_workspace_等paper3出來就投/03_experiments",
+  "write_boundary": "this directory only; original inputs and canonical manuscript unchanged",
+  "no_calls": "No network model calls, no credential lookup, no paper4 changes",
+  "wording_count_definition": "For each final mission text, manually annotate at most one exact representative span for each of six service concepts (safety/C2, Remote-ID, video, energy, Wi-Fi pressure, mobility). Count occupied concept slots. Record local-authority language separately. This is a reproducible description of the final text, not a count or sequence of historical editing operations. Retain both lexicons' substring matches independently of this annotation.",
+  "pair_check": "Compare records 1-24 with records 25-48 on gold_cost_profile, guards, family_mix and cost_weights. Pairing is a present-file equality check, not proof of historical generation order or annotation independence.",
+  "scaling_replay": "Copy the saved code and inputs; redirect RESULT_DIR into this directory; reproduce all archived K=6,18,36,60 rows and K=60 direct-variant rows with the same cached policies. Do not generate or add variants.",
+  "behavior_signature": "At each K, group variants by identical acceptance and, when accepted, loss rounded to 12 decimals over every archived mission x archetype x seed context. This is finite-grid behavior equivalence for audit, not a global equivalence theorem. Candidate expansion ordering is outside this equivalence definition.",
+  "claims": "Report all methods and both nominal catalogue size and finite-grid behavior classes. Do not infer physical execution, action duration, intensity effects or parameter calibration from names alone.",
+  "history": "Source locations and saved hashes prove the evaluated implementation. File order and current timestamps do not prove selection-before-evaluation, frozen gold, lack of post-observation tuning, or human annotation independence.",
+  "outputs": ["mission_concept_annotations.json", "mission_wording_mapping.csv", "mission_context_pairs.csv", "cost_guard_source_index.csv", "main_cost_coefficients.csv", "guard_adjustments.csv", "action_overheads.csv", "scaling_variant_catalogue.csv", "scaling_behavior_classes.csv", "scaling_replay_comparison.csv", "verification.json", "manifest.json"]
+}

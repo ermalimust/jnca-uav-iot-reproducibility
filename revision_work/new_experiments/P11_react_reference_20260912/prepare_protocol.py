@@ -1,0 +1,127 @@
+"""Prepare the P11 proposal; this script never calls a model service."""
+from pathlib import Path
+import csv, hashlib, json, os, shutil, sys
+from datetime import datetime, timezone
+
+HERE = Path(__file__).resolve().parent
+P8 = HERE.parent / 'P8_matched_interfaces_20260912'
+def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+def save(name, value): (HERE/name).write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+
+def main():
+    for name in ['public_tasks.json', 'public_specification.json', 'private_id_map.json', 'paired_source_samples.npz']:
+        dest = HERE/name
+        if dest.exists(): assert sha(dest) == sha(P8/name), name
+        else: shutil.copyfile(P8/name, dest)
+    p8 = json.loads((P8/'protocol.json').read_text(encoding='utf-8'))
+    variants = ['react_reference', 'contemporary_zero']
+    metrics = ['oracle_coverage', 'selected_regret', 'invalid_action_rate']
+    pairs = [('react_reference', 'contemporary_zero')]
+    hypotheses = []
+    for a, b in pairs:
+        for k in metrics:
+            hypotheses.append(dict(contrast_id=f'{a}__minus__{b}__{k}', method=a, reference=b, metric=k,
+                family='P11_react_reference_7', inference_unit='48 mission means', test='two-sided paired sign-flip',
+                expectation='positive' if k=='oracle_coverage' else 'negative',
+                role='named-agent comparison' if b=='contemporary_zero' else 'candidate-source comparator'))
+    for a in variants:
+        for k in ['selected_regret', 'invalid_action_rate']:
+            hypotheses.append(dict(contrast_id=f'{a}_guarded__minus__{a}_direct__{k}', method=a+'_guarded',
+                reference=a+'_direct', metric=k, family='P11_react_reference_7', inference_unit='48 mission means',
+                test='two-sided paired sign-flip', expectation='negative', role='same-policy safety/selection component'))
+    assert len(hypotheses)==7
+    with (HERE/'planned_hypotheses.csv').open('w',encoding='utf-8',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=list(hypotheses[0]));w.writeheader();w.writerows(hypotheses)
+    protocol = {
+        'version': 2, 'date': '2026-09-12', 'status': 'root_approved_before_any_model_calls',
+        'objective': 'Evaluate a named, task-adapted bounded ReAct reference against contemporaneous zero-shot under identical public inputs and the same downstream authorization/selection contract.',
+        'reviewer_item': 'R1 C5',
+        'reviewer_question': 'The related work cites early LLM networking papers (Jiang et al., He et al.) but fails to compare against state-of-the-art LLM agents that perform tool-calling and iterative reasoning (e.g., ReAct, Tree-of-Thoughts). The manuscript claims language models are "bounded," yet does not evaluate whether more sophisticated prompting strategies could achieve better results with the same safety guarantees.',
+        'reference': {
+            'name': 'Task-adapted bounded ReAct reference',
+            'paper': 'https://arxiv.org/abs/2210.03629v3',
+            'repository': 'https://github.com/ysymyth/ReAct',
+            'commit': '6bdb3a1fd38b8188fc7ba4102969fe483df8fdc9',
+            'commit_date': '2023-07-14', 'core_reference_file': 'hotpotqa.ipynb',
+            'preserved': ['interleaved Thought / Action / real environment Observation', 'model chooses next action from available tool actions', 'append full actual trajectory to subsequent calls', 'Finish terminates the episode', 'bounded step count and explicit unsuccessful termination'],
+            'adapted': ['Qwen chat API instead of text-davinci-002 completion API', 'public intervention capability environment replaces Wikipedia', 'two tool rounds plus final completion instead of seven reference iterations', 'format instructions and public contract replace six QA exemplars; no target-task demonstrations or gold policies', 'no extra malformed-action repair calls outside the fixed budget'],
+            'claim_boundary': 'Reference implementation of the published ReAct interaction pattern adapted to this candidate-generation environment; not an unchanged execution of the authors\' HotpotQA benchmark and not a Tree-of-Thoughts experiment.'
+        },
+        'model': p8['model'], 'endpoint': p8['endpoint'], 'temperature': 0.2, 'enable_thinking': False,
+        'variants': variants, 'missions': 48, 'generation_replicates': 3,
+        'public_inputs': 'Byte-identical P8 opaque task IDs, mission text, full supported-action descriptions/targets/risks and six public archetypes. Both groups receive the full information. No private mission identifier, weights, guards, posterior values, realized labels or scores is accessible to the generation module or tools.',
+        'public_input_files': ['public_tasks.json','public_specification.json'],
+        'private_evaluation_only_files': ['private_id_map.json','paired_source_samples.npz'],
+        'input_provenance': {n:{'source': '../P8_matched_interfaces_20260912/'+n, 'sha256': sha(HERE/n)} for n in ['public_tasks.json','public_specification.json','private_id_map.json','paired_source_samples.npz']},
+        'generation_budget': {
+            'aggregate_completion_token_ceiling_per_policy': 4800,
+            'contemporary_zero_max_calls': 1, 'contemporary_zero_max_tokens': 4800,
+            'react_max_model_calls': 3, 'react_max_tool_rounds': 2,
+            'react_nonfinal_call_token_cap': 1600,
+            'react_final_call_token_cap': '4800 minus observed prior completion tokens, counting the configured cap if usage is absent; capped by remaining budget',
+            'early_finish': 'Allowed after at least one actual CheckPolicy observation, including at call two. A premature Finish receives a budget-consuming environment error observation; no hidden repair or extra call.',
+            'input_serialized_payload_byte_cap': 32000,
+            'input_cost_bound_tokens_per_request': 32768,
+            'input_bound_reason': 'All prompt text and JSON fields fit inside 32000 UTF-8 payload bytes; allow a further 768 tokens for chat framing. Oversize input becomes an explicit retained failure; public data are not silently truncated.',
+            'maximum_logical_calls': 576, 'transport_attempts_per_call': 3,
+            'maximum_http_attempts': 1728, 'request_timeout_s': 120,
+            'whole_run_cost_reservation_ceiling_usd': 4.4,
+            'cost_gate': 'Before each physical HTTP attempt, reserve the list-price cost of serialized UTF-8 payload bytes plus 768 input tokens and the requested max completion tokens. Cumulative reservations never exceed USD 4.4; exhaustion is a retained explicit budget failure. Retain reservations even after a failed/cheaper request.',
+            'actual_usage': 'Save each full payload and response (without headers/credentials), all attempts, response model name, finish reason, prompt/completion/total tokens and request/queue/tool/episode elapsed times. Missing usage remains unknown and is separately counted.'
+        },
+        'react_environment': {
+            'format': 'Thought i: one concise operational assessment followed by Action i: ToolName[JSON arguments]. The executor supplies Observation i and never asks the model to invent it.',
+            'actions': {
+                'SearchCapabilities': 'Query public action names, descriptions, targets and risks with query text and/or explicit action names. Returns deterministic matching public records; no ranking by diagnostic probability or benefit.',
+                'CheckPolicy': 'Check one proposed full policy, its supported/distinct/three-candidate contract, exact membership of up to three quoted mission spans, and candidate capability coverage against the six public archetypes; return the same public risk descriptions. No task gold interpretation, feasibility, cost or hidden score is returned.',
+                'Finish': 'Return final JSON policy with the task_id and six archetype candidate lists. The fixed downstream verifier and selector determine runtime admission/action.'
+            },
+            'loop': 'At each of the first two calls, model chooses SearchCapabilities, CheckPolicy, or (after a CheckPolicy observation) Finish. The real tool response is appended to the exact accumulated trajectory. After two tool rounds the final call permits Finish only. This allows Search->Check->Finish, Check->revised Check->Finish, and Check->Finish without a forced pair of drafts.',
+            'invalid_action': 'Unrecognized, unparseable, premature Finish or unsupported tool arguments produce a deterministic error Observation and consume one available tool round; the next scheduled call may react. No output is discarded or resampled for quality.',
+            'candidate_budget': 'Exactly three distinct ranked action names per six archetypes requested. Evaluation retains the first three distinct returned action-name strings, including unsupported strings for verifier rejection. Native output and violations also saved. Missing/unparseable final policy gives empty candidates under unchanged fallback/escalation.',
+            'information_parity': 'The tools compute only from the exact public text/spec already in both prompts; access to a capability record does not add hidden information.'
+        },
+        'schedule': {'seed': 20260912111, 'unit': 'mission-replicate pair', 'interleaving': 'Shuffle 144 pairs once; randomize order of the two variants within each pair, execute the two variants consecutively within a worker.', 'concurrency': 4, 'minimum_http_start_spacing_s': 1.1},
+        'failure_handling': 'Retain all HTTP/API/parse/tool/schema failures and raw attempts. Retry only transport failure, HTTP 429 or HTTP 5xx, at most twice. No quality-driven retry, prompt adjustment, replacement policy or performance-driven rerun. Resume completed policies by hash; a successful model output is never discarded.',
+        'evaluation': {
+            'source': 'P8 fixed saved diagnostic and realized samples, action library, mission preferences and scalar authorization/selection functions; unchanged from P8.',
+            'exposures_per_generated_method': 276480,
+            'pairing': '48 missions x 12 fixed simulation seeds x 160 windows x 3 independent generation replicates. Both generated methods share every q/y exposure, candidate cap and verifier/selector. Full library is the explicit six-action ceiling.',
+            'controls': ['broad_first3','embedding_first3','full_library'],
+            'metrics': ['oracle_coverage','selected_regret','invalid_action_rate','candidate_size','fallback_rate','realized_loss'],
+            'native_and_historical': 'Native candidate-size summaries and historical P8 values are descriptive only. No confirmatory historical-cohort contrasts are added.',
+            'non_generative_controls': 'All 18 generated-method versus broad/embedding/full-library metric contrasts are retained with effect and pointwise 95% paired CI descriptively; no additional significance tests or superiority claims are introduced for these comparator rows.'
+        },
+        'inference': {
+            'unit': '48 original-mission means after averaging 12 simulation seeds and three generation replicates',
+            'primary_count': 7, 'primary_file': 'planned_hypotheses.csv',
+            'bootstrap_repetitions': 10000, 'sign_flip_repetitions': 100000,
+            'seed': 20260912112, 'test': 'two-sided paired sign-flip with add-one correction and zero-difference p=1',
+            'ci': 'paired bootstrap percentile 95% CI at the mission level',
+            'multiplicity': 'Report every planned contrast and raw p, within-P11 Holm/BH and export ALL seven rows to the final pooled study family; main inferential claims follow final pooled correction.',
+            'cluster_sensitivity': 'Average paired mission themes to 24 units and repeat the same contrasts as a separately labeled sensitivity; do not treat them as new primary hypotheses.',
+            'interpretation': 'An unconfirmed superiority difference is not equivalence. Candidate-source tradeoffs, adverse directions and intervals are retained. Same verifier architecture supplies the same formal authorization contract, while realized invalidity is separately measured.'
+        },
+        'operational_validation': ['all 288 attempted policies accounted for', 'all actual tool observations deterministically replayed from preceding public-only action', 'subsequent payload includes exact previous action and observation', 'at most two tool rounds, three ReAct calls and 4800 observed completion tokens', 'final policy revision versus preceding checked draft recorded', 'no model-generated fake observation used', 'unsupported/malformed/early finish/loop budget failure synthetic cases', 'full 552960 new offline decisions independently checked with scalar guard selection', 'independent recomputation of all seven raw p and 24-theme sensitivities'],
+        'release_gate': 'Root approved before any model API call: seven primary tests fixed and eighteen control contrasts descriptive. Freeze protocol, public inputs, prompts, generator, tools, schedule and tests with SHA256 before the first call. Only new P11 outputs may be written; canonical manuscript/reply and P1-P10 remain read-only.'
+    }
+    save('protocol.json',protocol)
+    save('local_configuration_receipt.json',{
+        'read_at_utc': datetime.now(timezone.utc).isoformat(),
+        'configuration_source': '../P8_matched_interfaces_20260912/protocol.json', 'source_sha256':sha(P8/'protocol.json'),
+        'model':p8['model'],'endpoint':p8['endpoint'],'credential_available':bool(os.getenv('DASHSCOPE_API_KEY') or os.getenv('QWEN_API_KEY')),
+        'secret_values_read_or_written_to_receipt':False,
+        'model_pinning':'The configured service alias qwen-plus is used in both contemporaneous groups. Provider response model/ID are retained; no inaccessible historical snapshot is asserted.'})
+    input_tokens=576*32768;output_tokens=288*4800
+    cost=input_tokens*.115/1e6+output_tokens*.287/1e6
+    save('cost_estimate.json',{
+        'retrieval_date':'2026-09-12','official_source':'https://www.alibabacloud.com/help/en/model-studio/model-pricing',
+        'region':'China (Beijing)','mode':'non-thinking','model':'qwen-plus','input_tier':'0 < input tokens <= 128K',
+        'usd_input_per_million':.115,'usd_output_per_million':.287,
+        'nominal_maximum_logical_calls':576,'nominal_input_token_bound':input_tokens,'nominal_output_token_bound':output_tokens,
+        'nominal_conservative_cost_usd':cost,'uncapped_all_three_transport_attempts_billed_full_bound_usd':3*cost,
+        'enforced_cumulative_attempt_cost_reservation_ceiling_usd':4.4,
+        'typical_16000_input_token_per_call_scenario_usd':576*16000*.115/1e6+output_tokens*.287/1e6,
+        'caveat':'List-price planning estimate, not an account quote. Actual response usage, cached-token discounts, unsuccessful-attempt uncertainty and billing currency are separately reported; no free quota is assumed.'})
+    print('Prepared approved protocol and seven hypotheses. No model API called.',flush=True)
+if __name__=='__main__': main()

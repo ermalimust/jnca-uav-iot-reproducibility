@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "date": "2026-09-12",
+  "fixed_before_evaluation": true,
+  "purpose": "Matched saved-Qwen prefix/full-sequence interface comparison and additive-versus-joint scoring in identical action-dependent physics",
+  "model_source": "../P6_temporal_completion_20260912/run_temporal.py",
+  "model_parameters": "All original P6 nominal values unchanged, including 30x100ms intervals, mission switch at15, switch charge .2, 96 seeds starting60912000",
+  "semantic_source": "../P6_temporal_completion_20260912/sequence_policies.json",
+  "generation_replicates": [0,1,2],
+  "interfaces": {
+    "prefix_H1": "Truncate each saved two-command candidate to its first command; same raw candidate records and compiler calls. Each interval select minimum one-step score among verified prefixes. Duplicate prefixes share action semantics and are reported.",
+    "sequence_execute2": "Existing P6 actual sequence execution: select first by H2 belief-tree score, then reverify submitted continuations next interval and execute the best admitted continuation; replan on rejection or mission change."
+  },
+  "interpretation": "A saved-content-matched whole-interface intervention. Selection horizon and continuation execution both change; not a separately prompted single-action model and not a unique causal effect of continuation alone.",
+  "score_modes": ["joint","additive"],
+  "additive_proxy": "At identical observed state and command, Ladd(z)=Ljoint(normal)+sum_r z_r*(Ljoint(single_r)-Ljoint(normal)). No clipping, even if extrapolation is negative; retain raw values. Overhead/switch charges are identical.",
+  "physics": "Always the original joint queue dynamics, even when additive scores choose actions. Fixed-path reevaluation and matched score-induced replanning are reported separately.",
+  "references": "Full-library H2 under both scoring modes, each on its own path; no global optimum/regret claim.",
+  "primary_inferential_unit": "96 independent exogenous episode seeds; average three generation replicates within seed first. Two fixed mission texts/segments do not support mission-population inference.",
+  "planned_contrasts": [
+    {"id":"P10_seq_vs_prefix_joint_cost","family":"P10_matched_temporal","outcome":"physical cumulative utility","definition":"sequence(joint score)-prefix(joint score)"},
+    {"id":"P10_prefix_additive_replan_vs_joint_replan_cost","family":"P10_matched_temporal","outcome":"physical cumulative utility","definition":"prefix(additive score)-prefix(joint score)"},
+    {"id":"P10_sequence_additive_replan_vs_joint_replan_cost","family":"P10_matched_temporal","outcome":"physical cumulative utility","definition":"sequence(additive score)-sequence(joint score)"},
+    {"id":"P10_fixed_path_gain_additive_vs_joint","family":"P10_matched_temporal","outcome":"difference in sequence-minus-prefix gap","definition":"On joint-score fixed paths, (sequence additive evaluator-prefix additive evaluator)-(sequence joint evaluator-prefix joint evaluator)"}
+  ],
+  "statistics": {"bootstrap_draws":10000,"bootstrap_seed":609121001,"two_sided_sign_flips":100000,"permutation_seed":609121002,"p_correction":"(extreme+1)/(draws+1)","rawp_scope":"Only the four planned contrasts; submitted for pooled multiplicity adjustment. All other intervals descriptive."},
+  "descriptive": {
+    "cumulative_time_slices_after_intervals":[1,5,10,15,16,20,25,30],
+    "mission_segments":[[0,14],[15,29]],
+    "stability":["action changes","ABA returns","action dwell length","switch-centred five-window metrics","first post-transition 3-consecutive-window C2-deadline-and-semantic-valid run","censoring and admissions"],
+    "semantics":"Mission-specific weighted service utility and realized mission/action predicates are operational proxies; no independently elicited intent-alignment score."
+  },
+  "latency": {
+    "K":[6,12,24,60,120,300],
+    "batches":40,"calls_per_batch":250,"warmup":200,
+    "included":"One belief update-to-marginals, finite-K vectorized admission and expected-score ranking over precomputed eight-mode utility rows",
+    "excluded":"Model API, diagnostic feature extraction, full H2 tree, hardware actuation, network and flight deadlines",
+    "catalogue":"Synthetic finite catalogue rows benchmark selection workload, not new physical action primitives; report workload construction and host."
+  },
+  "preservation":"Prior P6 files and all raw generation outputs remain unchanged."
+}

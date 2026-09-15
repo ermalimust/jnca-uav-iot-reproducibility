@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "date": "2026-09-12",
+  "purpose": "Reproducible sensitivity of the reported inferential conclusions to a pooled multiple-comparison family.",
+  "timing": "Retrospective: the five existing inferential families and their results had already been examined. This is not a preplanned confirmatory family and must not be described as one.",
+  "baseline": "Include every primary raw-p row in heldout9, triggered6, main_crossed14, prompts9 and components8: 46 tests total. Preserve original-family adjustments, effects, pointwise intervals and all signs.",
+  "adjustments": "Recompute each source family and the pooled family using Holm and Benjamini-Hochberg. Holm at alpha 0.05 is the inferential decision rule; BH is an additional reported adjustment. A pointwise confidence interval is not converted into a simultaneous interval.",
+  "expanded": "After P8 and P10 protocols and complete results are frozen, include all their designated primary raw-p contrasts through a source registration file. No filtering on sign, p-value or whether an added test supports the proposed method. Keep the baseline46 analysis unchanged as a separately labelled sensitivity.",
+  "no_duplication": "The 24-theme-pair sensitivity and other alternate-unit recomputations of an already included hypothesis are reported separately, not repeated as independent primary hypotheses. Purely descriptive confidence intervals without planned raw-p tests are not invented into p-values.",
+  "source_handling": "Read saved source CSVs without modification. Preserve raw p values as decimal strings, source row numbers, metrics and file SHA256. Register planned expected row counts and protocol hashes for each added source before aggregation.",
+  "independent_validation": "A second script uses Decimal and direct per-row max/min definitions, rather than the primary sorted cumulative implementation. It verifies all raw-p strings, family/pooled adjustments, all flags, source hashes and row counts.",
+  "scope": "The expanded pooled analysis is a post-review sensitivity. It does not retroactively change the original research design, establish prompt equivalence, remove model-validation limitations or guarantee policy safety. The complete test inventory provides the denominator for the stated pooled adjustment."
+}

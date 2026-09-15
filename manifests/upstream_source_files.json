@@ -1,0 +1,70 @@
+{
+  "scope": "Exact unchanged upstream source files. URLs and hashes retained for optional independent retrieval. This manifest grants no new license.",
+  "files": [
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/wichoose/exp-logs/lustosa5/rx/wcgpsprinter-2024.07.19-22.04.13.csv",
+      "url": "https://gitlab.com/api/v4/projects/58506285/repository/files/exp-logs%2Flustosa5%2Frx%2Fwcgpsprinter-2024.07.19-22.04.13.csv/raw?ref=241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "sha256": "590183cf04a7cc10edc7cbc3fdbf013005be054e8b3452fade1210ca97bd6a35",
+      "bytes": 288152,
+      "upstream_commit": "241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "license_evidence": "Upstream repository root LICENSE: GPL-3.0; preserve original repository notice."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/wichoose/exp-logs/lustosa5/rx/wcreceiver-2024.07.19-22.04.13.csv",
+      "url": "https://gitlab.com/api/v4/projects/58506285/repository/files/exp-logs%2Flustosa5%2Frx%2Fwcreceiver-2024.07.19-22.04.13.csv/raw?ref=241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "sha256": "c5846651a0e1e1b00ec6a7a712f66ee06d984c17be2be62ff445fe4fff8bfdee",
+      "bytes": 136418,
+      "upstream_commit": "241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "license_evidence": "Upstream repository root LICENSE: GPL-3.0; preserve original repository notice."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/wichoose/exp-logs/lustosa5/tx/wcgpsprinter-2024.07.19-22.06.18.csv",
+      "url": "https://gitlab.com/api/v4/projects/58506285/repository/files/exp-logs%2Flustosa5%2Ftx%2Fwcgpsprinter-2024.07.19-22.06.18.csv/raw?ref=241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "sha256": "d1d17636f120390e1be4f45668258e7c59cb4d9c589f382d9b3307cfeba8439d",
+      "bytes": 310128,
+      "upstream_commit": "241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "license_evidence": "Upstream repository root LICENSE: GPL-3.0; preserve original repository notice."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/wichoose/exp-logs/lustosa5/tx/wcrssiprinter-2024.07.19-22.06.18.csv",
+      "url": "https://gitlab.com/api/v4/projects/58506285/repository/files/exp-logs%2Flustosa5%2Ftx%2Fwcrssiprinter-2024.07.19-22.06.18.csv/raw?ref=241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "sha256": "af38b0c4120b38209c20fb5fd3f77fbd06a9b9b674bbef2fd2ec866f0b9f7fbe",
+      "bytes": 121726,
+      "upstream_commit": "241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "license_evidence": "Upstream repository root LICENSE: GPL-3.0; preserve original repository notice."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/wichoose/exp-logs/lustosa5/tx/wcsender-2024.07.19-22.06.18.csv",
+      "url": "https://gitlab.com/api/v4/projects/58506285/repository/files/exp-logs%2Flustosa5%2Ftx%2Fwcsender-2024.07.19-22.06.18.csv/raw?ref=241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "sha256": "8a2d87847f9a7720618c2dd1cb9ec1a7eb198bc120c5df180ea73f0a23a7101f",
+      "bytes": 143116,
+      "upstream_commit": "241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "license_evidence": "Upstream repository root LICENSE: GPL-3.0; preserve original repository notice."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/wichoose/exp-logs/lustosa5/tx/wichoicemaker-2024.07.19-22.06.18.csv",
+      "url": "https://gitlab.com/api/v4/projects/58506285/repository/files/exp-logs%2Flustosa5%2Ftx%2Fwichoicemaker-2024.07.19-22.06.18.csv/raw?ref=241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "sha256": "f7cf57717525dcde31996253ca5f586ec058eeae7c85ab310abd08449ab54f29",
+      "bytes": 128436,
+      "upstream_commit": "241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "license_evidence": "Upstream repository root LICENSE: GPL-3.0; preserve original repository notice."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/wichoose/exp-logs/lustosa5/tx/wichoiceprinter-2024.07.19-22.06.18.csv",
+      "url": "https://gitlab.com/api/v4/projects/58506285/repository/files/exp-logs%2Flustosa5%2Ftx%2Fwichoiceprinter-2024.07.19-22.06.18.csv/raw?ref=241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "sha256": "0cffc7d8a803d54f25b9b2f182e1443c8be5dd30a941246b2ad79d3177c62545",
+      "bytes": 3240,
+      "upstream_commit": "241e2d146aa182cd1f9f91fe7b65414f0298dbb7",
+      "license_evidence": "Upstream repository root LICENSE: GPL-3.0; preserve original repository notice."
+    },
+    {
+      "path": "revision_work/new_experiments/P22_capture_contract_20260914/sources/wiperf_2022_06_14_data.csv",
+      "url": "https://zenodo.org/api/records/6821792/files/wiperf_2022_06_14_data.csv/content",
+      "sha256": "b852308730d2994b6e7a22af6046f46841e34dbde123f65f407c91bb40473bf6",
+      "bytes": 415819,
+      "upstream_record": 6821792,
+      "license": "cc-by-nc-nd-4.0",
+      "attribution": "Daniel Teixeira, Rui Meireles, Ana Aguiar. WiPerf Vehicular Wi-Fi Performance Monitoring Dataset v1.0, 2022. DOI: 10.5281/zenodo.6821792."
+    }
+  ]
+}

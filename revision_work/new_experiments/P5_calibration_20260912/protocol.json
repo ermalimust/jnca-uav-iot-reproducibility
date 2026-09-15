@@ -1,0 +1,15 @@
+{
+  "status": "fixed before the first calibration fit and calibrated test evaluation",
+  "reviewer_ids": ["R4 m3"],
+  "question": "How does a validation-fitted probability recalibration change calibration quality and the complete guarded decision path on the archived test benchmark?",
+  "diagnostic_fit": "Use the unchanged logistic diagnostic model fitted only on original train scenarios in P1.",
+  "calibration_fit": "One affine map per cause on logit(q), sigmoid(a*logit(q)+b), fitted on unique nonambiguous original val windows. Minimize mean binary NLL plus 0.5*0.0001*((a-1)^2+b^2). Identity initialization; Newton/backtracking; no calibration-model search or threshold tuning.",
+  "evaluation": "Original test_id scenarios, disjoint from both train and val. Report all nonambiguous test windows and the original 54000 main decision exposures. This is an exploratory intervention on an existing published test benchmark, not a newly collected external test.",
+  "decision_controls": "Same saved 30 Qwen rules, source windows, seeds, utility matrices, realized labels and guard thresholds. Recompute posterior-case routing, candidate exposure, verifier and ranking using calibrated q. No LLM regeneration.",
+  "primary_decision_metrics": ["mean regret", "realized invalid rate"],
+  "other_metrics": ["Brier per cause", "10 equal-width-bin ECE per cause", "selected fallback", "fallback due to no accepted candidates", "escalation", "action change", "routing change"],
+  "uncertainty": "10000 paired bootstrap resamples of the eight test source scenarios, carrying each source scenario's full original set of decision exposures. Ratio-of-sums estimates preserve the original exposure weighting. Pointwise intervals describe sensitivity to these eight synthetic source scenarios and do not represent independent LLM generations or deployment uncertainty. No significance claim or test-family change.",
+  "random_seed": 2026091205,
+  "success_gate": "Disjoint source scenarios and windows; test labels excluded from fitting; finite converged calibration maps; all 54000 raw decisions match archive; calibrated decisions follow identical code and all outputs are retained regardless of direction.",
+  "claim_boundary": "Controlled probability intervention in the recovered simulator-defined benchmark. No guarantee of improvement, physical safety, or external calibration. Unit-sum normalization is a separate experiment."
+}

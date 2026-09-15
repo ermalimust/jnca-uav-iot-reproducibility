@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "date": "2026-09-12",
+  "purpose": "Compute the exact selected-outcome flip infimum under a common relative L-infinity budget for the five positive guard thresholds and nonnegative entrywise mission cost coefficients, using existing saved-q decisions only.",
+  "scope": "Fixed saved six-decimal posterior, generated candidate strings and order, mission flags, action support, fallback/escalation rule and action overheads. Cost entries may vary independently with abs(Cprime-C)<=epsilon*C and Cprime>=0. Positive thresholds satisfy abs(thetaprime-theta)<=epsilon*theta. This is a per-decision perturbation certificate; different decisions may have different attaining perturbations.",
+  "not_in_scope": "Semantic weight changes followed by regeneration, changes to posterior/router, shared perturbations optimized for all missions at once, physical safety, or deployment generalization.",
+  "inputs": [
+    "revision_work/analysis/replay_inputs/results/audit_records/qwen_qwen-plus_guarded_audit_records.jsonl",
+    "revision_work/analysis/replay_inputs/paper7_agentic_feasibility.py",
+    "revision_work/analysis/followup_margins/decision_margins.csv"
+  ],
+  "algorithm": "Enumerate 32 rejection-atom truth patterns. Compute exact positive-threshold attainability and its infimum g. Apply guards to the fixed exposed candidates. Empty candidates use verified fallback or escalation. If the original winner is absent from a nonempty new list, its flip infimum is g. Otherwise minimize over admitted challengers the cost crossing c from B*max(0,1-epsilon)+H_b versus A*(1+epsilon)+H_a, preserving candidate tie order. Take max(g,c) within each pattern and the minimum across patterns; retain whether that minimum is attained.",
+  "arithmetic": "Use exact integer numerators/denominators derived from saved decimal q, archived coefficient and overhead constants. Verify all int64 cross-product bounds before comparison. Zero evidence makes the opposite positive-threshold atom unreachable. Epsilon above one clips reduced cost rows to zero. Infimum and attainment are reported separately.",
+  "validation": {
+    "all_rows": "Reconstruct nominal selection; check exact boundary feasibility and worst-case cost corners across all 32 patterns; compare boundary-flip existence with attainment. Check an interior radius for every row. Construct and replay a strictly-above-infimum witness for every finite result. Compare against the older sufficient joint certificate without overwriting it.",
+    "scalar_spot": "Independent fractions.Fraction implementation using interval breakpoints and explicit scalar guard logic. Fixed 256 random decisions (seed 609120701), first record of each mission, first eight cases in each of zero/infinite/radius-above-one/attained/not-attained categories, and the two existing worked examples; union without duplicate records.",
+    "synthetic": "Include zero cause evidence, zero coefficient rows, zero-radius strict ties, earlier/later candidate tie order, epsilon=1 clipping plateau, epsilon>1 crossing, open threshold boundary, closed boundary, empty-list fallback, escalation, and coincident guard/cost boundaries. Verify against independent Fraction solver."
+  },
+  "reporting": "All 54,000 rows, all 30 mission summaries, global descriptive distributions, finite/infinite and attained/unattained counts, exact closed-box stability at 10% and 20%, input hashes, validation receipts, and compact proposed manuscript/response text.",
+  "inference": "Deterministic algebraic analysis of fixed records. No sampling-based hypothesis test, new raw p-value or change to the existing 78-test family.",
+  "preservation": "Write only this new analysis directory and the assigned audit_fixes output directory; do not change canonical manuscript/reply or old scientific files. No API calls."
+}

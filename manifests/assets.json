@@ -1,0 +1,38 @@
+{
+  "version": "v1.0.0",
+  "repository": "https://github.com/ermalimust/jnca-uav-iot-reproducibility",
+  "assets": [
+    {
+      "part": "core",
+      "name": "jnca_v1.0.0_core.zip",
+      "bytes": 144306743,
+      "sha256": "b655007af9fd853d279f70d1903ad435e34e2c54cbc5a39887cf9cae0b3f773b",
+      "url": "https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/download/v1.0.0/jnca_v1.0.0_core.zip",
+      "files": 2839
+    },
+    {
+      "part": "ns3_action",
+      "name": "jnca_v1.0.0_ns3_action.zip",
+      "bytes": 298111121,
+      "sha256": "120e526ddf32eb34290830a6fb0e755c6ba02a7046b092d963f09600de35043f",
+      "url": "https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/download/v1.0.0/jnca_v1.0.0_ns3_action.zip",
+      "files": 3962
+    },
+    {
+      "part": "ns3_policy",
+      "name": "jnca_v1.0.0_ns3_policy.zip",
+      "bytes": 2083999960,
+      "sha256": "8299dad1f93cbdd87d41a6542719a6646b1bd0fbc20031541adf3b626f485bd0",
+      "url": "https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/download/v1.0.0/jnca_v1.0.0_ns3_policy.zip",
+      "files": 23308
+    },
+    {
+      "part": "measured_service",
+      "name": "jnca_v1.0.0_measured_service.zip",
+      "bytes": 532961576,
+      "sha256": "c34d54caa124f599eae351d6f2682875665717df62239df09f42b2444e50c369",
+      "url": "https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/download/v1.0.0/jnca_v1.0.0_measured_service.zip",
+      "files": 2209
+    }
+  ]
+}

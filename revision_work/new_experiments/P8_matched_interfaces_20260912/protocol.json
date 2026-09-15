@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "date": "2026-09-12",
+  "objective": "Repair generation-input asymmetry and compare a bounded public-capability planning agent with contemporaneous text-only zero-shot and non-generative controls.",
+  "model": "qwen-plus",
+  "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+  "temperature": 0.2,
+  "enable_thinking": false,
+  "max_tokens_first_agent_call": 3000,
+  "max_tokens_final_or_zero_call": 1600,
+  "variants": [
+    "opaque_zero",
+    "public_tool_agent"
+  ],
+  "missions": 48,
+  "generation_replicates": 3,
+  "normal_maximum_calls": 432,
+  "transport_attempts_per_call": 3,
+  "maximum_http_attempts": 1296,
+  "public_inputs": "Same exact mission intent, opaque randomized task ID, supported action descriptions/targets/risks and six diagnostic-archetype public definitions in both groups. No readable mission ID, gold profile, guards, weights, diagnostic values, realized labels, costs or outcomes.",
+  "opaque_id_seed": 20260912081,
+  "schedule_seed": 20260912082,
+  "concurrency": 4,
+  "minimum_http_start_spacing_s": 1.1,
+  "candidate_budget": "Exactly three distinct ranked actions per six archetypes requested. Primary evaluation takes first three distinct returned action-name strings, retaining unsupported names for verifier rejection; native output and violations separately retained. Historical P4 zero uses same first3 cap. Broad/embedding controls use first3 for primary matched-budget evaluation, native retained descriptively. Full library remains an explicit six-action ceiling.",
+  "agent": "Call 1 proposes two contrasting complete candidate plans and up to three exact mission-text evidence spans, then calls assess_public_plan. The real tool checks schema/support, verifies literal evidence spans, computes target coverage by public archetype, and returns public action capabilities/risks for proposed choices. It does not infer hidden guards or supply scores. Call 2 chooses or revises final candidates using this feedback. No adaptive expansion beyond this one tool round. Zero-shot receives all same public definitions; only computation and interaction differ.",
+  "failure_handling": "Retain all API, parse, tool and schema failures. Retry only transient transport/HTTP429/5xx at most twice; never regenerate because of quality or measured outcome. Missing/unparseable final outputs yield empty candidates handled by unchanged fallback/escalation. Cache receipts and resume without regenerating completed policies.",
+  "comparison_pairs": [
+    [
+      "public_tool_agent",
+      "opaque_zero"
+    ],
+    [
+      "opaque_zero",
+      "historical_semantic_id_zero"
+    ],
+    [
+      "opaque_zero",
+      "broad_first3"
+    ],
+    [
+      "opaque_zero",
+      "embedding_first3"
+    ],
+    [
+      "opaque_zero",
+      "full_library"
+    ],
+    [
+      "public_tool_agent",
+      "broad_first3"
+    ],
+    [
+      "public_tool_agent",
+      "embedding_first3"
+    ],
+    [
+      "public_tool_agent",
+      "full_library"
+    ]
+  ],
+  "comparison_metrics": [
+    "oracle_coverage",
+    "selected_regret",
+    "invalid_action_rate"
+  ],
+  "component_pairs": [
+    [
+      "opaque_zero_guarded",
+      "opaque_zero_direct"
+    ],
+    [
+      "public_tool_agent_guarded",
+      "public_tool_agent_direct"
+    ]
+  ],
+  "component_metrics": [
+    "selected_regret",
+    "invalid_action_rate"
+  ],
+  "planned_primary_tests": 28,
+  "inference": "Average 12 sample seeds and all three generation replicates within each of 48 original missions. Paired 10000 mission-bootstrap draws and 10000 sign-flips, two-sided add-one p values. One local 28-test Holm family; also submit every raw p to global expanded family. Fixed first24/second24 theme pairing gives separate 24-pair sensitivity, not additional primary hypotheses. All directions/non-significant results retained. Primary inference seed 20260912083.",
+  "cohort_caveat": "Opaque zero versus historical semantic-ID P4 zero is generation-cohort sensitivity: date, service alias behavior and explicitly shared archetype specification differ; no pure causal ID effect is claimed. Contemporaneous opaque-input comparisons answer input fairness.",
+  "evaluation": "Same original 48 mission evaluator, original DES posteriors/labels, 12 fixed source-window seeds and160 windows per mission seed. Full-information feasible oracle and unchanged posterior guards/selector. Independent scalar checks against original functions. Each generated group has276480 decision exposures, each across3 generations; exact total 48*12*160*3=276480 per group.",
+  "raw_p_contract": [
+    "contrast_id",
+    "method",
+    "reference",
+    "metric",
+    "delta",
+    "ci_low",
+    "ci_high",
+    "p_raw",
+    "family",
+    "inference_unit",
+    "pair24_delta",
+    "pair24_ci_low",
+    "pair24_ci_high",
+    "pair24_p_raw"
+  ],
+  "offline_outputs": "Exact public inputs, opaque-ID private join map, frozen protocol/hash receipt, all request/response/tool traces, final candidates, per-window selections/regret/invalidity, mission/replicate summaries, 28 raw tests, code and full manifests. Costs measured by calls, successful/attempted elapsed time, input/output tokens; no inferred monetary charges.",
+  "authorization": "User previously explicitly authorized Qwen and DeepSeek transmission and minor configured-account API charges; parent delegated this scoped repair on2026-09-12."
+}

@@ -15,7 +15,7 @@ python scripts/verify_files.py --root .
 python scripts/public_replay_checks.py --root . --check all
 ```
 
-The download is approximately 2.7 GB. Downloading is the only network step; verification uses the archived records and makes no model API calls. Numerical checks write a new receipt directory, leaving the published inputs unchanged. To start with the 54,000-decision main experiment, download `--part core` and run `--check main54`.
+The download is approximately 3.1 GB. Downloading is the only network step; verification uses the archived records and makes no model API calls. Numerical checks write a new receipt directory, leaving the published inputs unchanged. To start with the 54,000-decision main experiment, download `--part core` and run `--check main54`.
 
 | Check | Recalculated from saved records |
 |---|---|

@@ -1,0 +1,257 @@
+{
+  "date": "2026-09-14",
+  "status": "design fixed before P19 observations and service outcomes",
+  "question": "Independent one-command policy comparison with a trained ns-3 observation/service adapter",
+  "origin": "Designed after inspecting P18; P18 outcomes are development context, not new confirmation data.",
+  "actions": [
+    "Observe",
+    "WiFiRelief",
+    "LinkAdapt",
+    "VideoShape",
+    "FallbackProtect"
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "W0S0V0",
+      "w": 0,
+      "motion": 0,
+      "v": 0,
+      "speed_mps": 0,
+      "moving": 0,
+      "offer_path": "inputs/W0M0V0.csv"
+    },
+    {
+      "scenario_id": "W0S0V1",
+      "w": 0,
+      "motion": 0,
+      "v": 1,
+      "speed_mps": 0,
+      "moving": 0,
+      "offer_path": "inputs/W0M0V1.csv"
+    },
+    {
+      "scenario_id": "W0S1V0",
+      "w": 0,
+      "motion": 1,
+      "v": 0,
+      "speed_mps": 1.0,
+      "moving": 1,
+      "offer_path": "inputs/W0M1V0.csv"
+    },
+    {
+      "scenario_id": "W0S1V1",
+      "w": 0,
+      "motion": 1,
+      "v": 1,
+      "speed_mps": 1.0,
+      "moving": 1,
+      "offer_path": "inputs/W0M1V1.csv"
+    },
+    {
+      "scenario_id": "W0S2V0",
+      "w": 0,
+      "motion": 2,
+      "v": 0,
+      "speed_mps": 3.5,
+      "moving": 1,
+      "offer_path": "inputs/W0M1V0.csv"
+    },
+    {
+      "scenario_id": "W0S2V1",
+      "w": 0,
+      "motion": 2,
+      "v": 1,
+      "speed_mps": 3.5,
+      "moving": 1,
+      "offer_path": "inputs/W0M1V1.csv"
+    },
+    {
+      "scenario_id": "W1S0V0",
+      "w": 1,
+      "motion": 0,
+      "v": 0,
+      "speed_mps": 0,
+      "moving": 0,
+      "offer_path": "inputs/W1M0V0.csv"
+    },
+    {
+      "scenario_id": "W1S0V1",
+      "w": 1,
+      "motion": 0,
+      "v": 1,
+      "speed_mps": 0,
+      "moving": 0,
+      "offer_path": "inputs/W1M0V1.csv"
+    },
+    {
+      "scenario_id": "W1S1V0",
+      "w": 1,
+      "motion": 1,
+      "v": 0,
+      "speed_mps": 1.0,
+      "moving": 1,
+      "offer_path": "inputs/W1M1V0.csv"
+    },
+    {
+      "scenario_id": "W1S1V1",
+      "w": 1,
+      "motion": 1,
+      "v": 1,
+      "speed_mps": 1.0,
+      "moving": 1,
+      "offer_path": "inputs/W1M1V1.csv"
+    },
+    {
+      "scenario_id": "W1S2V0",
+      "w": 1,
+      "motion": 2,
+      "v": 0,
+      "speed_mps": 3.5,
+      "moving": 1,
+      "offer_path": "inputs/W1M1V0.csv"
+    },
+    {
+      "scenario_id": "W1S2V1",
+      "w": 1,
+      "motion": 2,
+      "v": 1,
+      "speed_mps": 3.5,
+      "moving": 1,
+      "offer_path": "inputs/W1M1V1.csv"
+    }
+  ],
+  "rng_seed": 6091419,
+  "train_runs": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016
+  ],
+  "validation_runs": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+  ],
+  "test_runs": [
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009,
+    3010,
+    3011,
+    3012,
+    3013,
+    3014,
+    3015,
+    3016,
+    3017,
+    3018,
+    3019,
+    3020,
+    3021,
+    3022,
+    3023,
+    3024,
+    3025,
+    3026,
+    3027,
+    3028,
+    3029,
+    3030,
+    3031,
+    3032
+  ],
+  "engineering_runs": [
+    9901,
+    9902
+  ],
+  "network": "P18 network, original public Parrot first 20s and all five unchanged handlers; initial range 15m; additional fixed speed 1m/s alongside stationary and 3.5m/s.",
+  "timing": {
+    "prefix_snapshot_ns": 10999999999,
+    "command_ns": 11000000000,
+    "effective_ns": 11001000000,
+    "offer_end_ns": 21000000000,
+    "drain_end_ns": 23000000000,
+    "deadline_ns": 10000000
+  },
+  "instrumentation": "Controller-local C2 offer/transmission/MAC ACK/drop records, controller-received video arrivals and actual video-frame RSSI. No flow2 counters, source video demand, remote C2 receive times, configured state, speed, range or future outcomes enter diagnostic features.",
+  "diagnostic": {
+    "model": "12-class multinomial logistic regression, final class reference logit zero",
+    "labels": "training-only configured external-traffic / motion-regime / video-burst operating conditions",
+    "training": "one frozen prefix observation per train episode; all classes and RNG blocks equally weighted",
+    "scaling": "train means and population standard deviations; constant standard deviations replaced by one",
+    "objective": "mean multiclass cross entropy + sum(nonintercept coefficients squared)/(2*C*n_train)",
+    "C_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selection": "minimum validation joint log loss; ascending C tie rule",
+    "probability_use": "joint12 belief for service expectation; W/M-active/V marginals for unchanged routing/guards; B=0 by explicitly absent BLE model",
+    "scope": "new ns-3 adapter; not frozen original 25-feature diagnostic or measured operational posterior"
+  },
+  "service_calibration": "Train-bank sample mean C2 miss and original-demand video nondelivery for each of 12 states x 5 actions; every source uses identical table and posterior expectation.",
+  "mission_scope": "All 19 archived OOD missions with rid=false and energy=false; inclusion depends only on metadata, not candidates or outcomes. Same 19 mission weights for every method.",
+  "service_loss": "alpha*C2_miss+(1-alpha)*(1-video_delivery), alpha=archived safety/(safety+throughput); no assigned overhead or mismatch term is presented as packet-measured cost. Unitless fraction, distinct from original MLU.",
+  "candidates": "P12 saved opaque_zero and public_tool_agent, all three replicates, plus broad_first3 and embedding_first3; first3 distinct then capability filter, no refill. Full library uses all five as explicitly broader comparator.",
+  "authorization": "Original routing and nominal guards, wrapped in A5 capability check. Guarded empty accepted list uses verified FallbackProtect, otherwise EscalateReview. Direct chooses first capability-valid entry, otherwise EscalateReview. EscalateReview does not actuate and receives Observe-arm physical outcomes; label/rate retained.",
+  "methods": [
+    "qwen_service",
+    "qwen_direct",
+    "embedding_service",
+    "broad_service",
+    "full_service",
+    "tool_service",
+    "qwen_numeric",
+    "embedding_numeric",
+    "broad_numeric",
+    "full_numeric",
+    "tool_numeric"
+  ],
+  "numeric_sensitivity": "Apply unchanged original numerical score to all five guarded candidate sources; descriptive factor, same adapter, packets and guards.",
+  "test_order": "Freeze code, source inputs, engineering gates; train and validate; freeze adapter and train service table; run test prefix-only probes; commit every method decision; only then permit new test action bank.",
+  "primary": {
+    "treatment": "qwen_service",
+    "comparators": [
+      "qwen_direct",
+      "embedding_service",
+      "broad_service",
+      "full_service"
+    ],
+    "endpoints": [
+      "c2_miss",
+      "video_delivery",
+      "service_loss"
+    ],
+    "test_count": 12,
+    "unit": "32 independent RNG blocks; average 12 fixed scenarios, 19 fixed missions and all source replicates within each block",
+    "test": "exact two-sided paired sign-flip using integer-scaled rational block differences and meet-in-the-middle counting; sign-exchangeability null",
+    "intervals": "10000 common paired block-bootstrap samples, percentile pointwise 95%",
+    "bootstrap_seed": 609141919,
+    "multiplicity": "All 12 tests added to archived 101-test inventory: pooled113 Holm and BH; retain every direction and all original raw tests."
+  },
+  "references": "Executable full_service uses the same prefix, predicted belief, train table and guards. Hindsight min over all A5 and separately q-admitted A5 uses test outcome bank only after decisions; descriptive finite-bank bounds, not deployable policies or physical-world optima.",
+  "scope": "One-command common-prefix branch replay, conditional on one public input case and 12 protocol scenarios. No field test, BLE/RID coexistence, hardware timing guarantee or unrestricted method superiority."
+}

@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "date": "2026-09-14",
+  "question": "Independent protocol-level effects of five executable action handlers; no diagnostic/policy comparison",
+  "actions": [
+    "Observe",
+    "WiFiRelief",
+    "LinkAdapt",
+    "VideoShape",
+    "FallbackProtect"
+  ],
+  "factor_order": [
+    "W",
+    "M",
+    "V"
+  ],
+  "rng_seed": 6091407,
+  "rng_runs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "engineering_runs": [
+    9001,
+    9002
+  ],
+  "input": {
+    "dataset": "AVIATOR Parrot AR 2.0",
+    "sha256": "0567854171e615713960e15e0566bc23534633d3bad8ed0a798b74c51da22beb",
+    "capture_member": "sample_pcaps/parrotar2_modified.pcap",
+    "flow": "192.168.1.3:5556 -> 192.168.1.1:5556 UDP",
+    "recording_interval_s": [
+      0,
+      20
+    ],
+    "simulator_time_offset_s": 1,
+    "payload_sizes": "retained UDP-header-derived application lengths",
+    "expected_packets": 800,
+    "expected_bytes": 46188
+  },
+  "timing": {
+    "sources_start_s": 1,
+    "command_s": 11,
+    "actuation_latency_s": 0.001,
+    "sources_stop_s": 21,
+    "simulation_stop_s": 23,
+    "evaluation_offer_interval_s": [
+      11,
+      21
+    ],
+    "evaluation_receive_interval_s": [
+      11,
+      21
+    ],
+    "deadline_s": 0.01,
+    "cohort_width_s": 0.1
+  },
+  "network": {
+    "ns3_version": "3.47",
+    "standard": "802.11a",
+    "channel": 36,
+    "channel_width_mhz": 20,
+    "band": "5GHz",
+    "tx_power_dbm": 16,
+    "noise_figure_db": 7,
+    "channel_model": "YansWifiChannel",
+    "loss": "LogDistance, exponent 3, reference distance 1m, reference loss 46.6777dB",
+    "delay": "ConstantSpeedPropagationDelayModel",
+    "error": "NistErrorRateModel",
+    "mode": "OfdmRate24Mbps",
+    "control_mode": "OfdmRate6Mbps",
+    "qos": true,
+    "mac_queue_packets": 128,
+    "mac_queue_max_delay_s": 0.5,
+    "rts_cts_threshold": 65535,
+    "fragment_threshold": 65535,
+    "wifi_streams_start": 100,
+    "primary_ssid": "p18-primary",
+    "external_ssid": "p18-external",
+    "topology": "Four nodes, two ad-hoc links, same channel. Primary controller=(0,0,0), UAV initially=(15,0,0); external sender=(0,20,0), receiver=(15,20,0).",
+    "M0": "UAV constant position",
+    "M1": "UAV moves +x at 3.5m/s from t=1 to t=21; same trajectory in every action arm",
+    "W0": "No external application traffic",
+    "W1": "1200-byte external UDP packets every 1200us, 8Mbps offered, t in [1,21)",
+    "V0": "1200-byte video packet every 8000us, 1.2Mbps offered",
+    "V1": "1200-byte video packets every 800us in the first 500ms of each 1s period, 12Mbps burst / 6Mbps mean offered",
+    "frame_retry_limit": 7
+  },
+  "handlers": {
+    "Observe": "No parameter changes",
+    "WiFiRelief": "UAV AC_BE CWmin=63, CWmax=1023, AIFSN=7; original defaults are CWmin=15 CWmax=1023 AIFSN=3; existing queues and in-flight packets retained",
+    "LinkAdapt": "Both primary nodes ConstantRateWifiManager DataMode becomes OfdmRate6Mbps; control mode, power, channel and propagation unchanged; no device rebuild or modeled extra retune outage",
+    "VideoShape": "UAV video application FIFO with 128-packet limit, packet-paced at 4Mbps; first eligible dequeue at action activation; existing network queue unchanged; new offered demand remains fixed",
+    "FallbackProtect": "Controller C2 socket IP ToS=0xC0 (UP6/AC_VO), plus the same UAV video FIFO paced at 1Mbps; already submitted packets keep their original classification"
+  },
+  "drain": "Generators stop at 21s; shaper keeps dequeuing until 23s; sinks stay active. Shaper full-drop and socket rejection are explicit terminal outcomes. Network non-delivery by 23s is a horizon outcome, not an asserted permanent physical loss.",
+  "primary_endpoints": [
+    "c2_deadline_miss_fraction",
+    "video_delivery_fraction"
+  ],
+  "video_primary_definition": "Unique payload bytes first received by 23s among packets offered in [11,21), divided by all video bytes offered in [11,21); offered denominator includes shaper drops and socket failures",
+  "secondary_endpoints": [
+    "c2_received_fraction",
+    "c2_received_delay_mean_ms",
+    "c2_received_delay_p95_ms",
+    "video_receive_window_mbps",
+    "video_shaper_drop_bytes",
+    "video_socket_reject_bytes",
+    "video_unreceived_horizon_bytes",
+    "application_to_phy_attempt_counts"
+  ],
+  "statistics": {
+    "primary_contrasts": "Four actions minus Observe on each of the two primary endpoints; eight tests",
+    "estimand": "Equal-weight average over eight fixed scenarios, within each of 16 independent RNG run blocks",
+    "test": "Exhaustive two-sided 2^16 paired block sign-flip, absolute mean difference, including equality; assumes sign exchangeability under the null",
+    "bootstrap": "10000 paired 16-block resamples, common indices across actions/scenarios/endpoints; percentile pointwise 95% intervals",
+    "bootstrap_seed": 609140718,
+    "multiplicity": "All eight primary tests added to the archived 93-test inventory; report within-eight and complete pooled-101 Holm/BH. Scenario and secondary results descriptive."
+  },
+  "engineering_gates": [
+    "zero-traffic",
+    "short-range low-load deterministic delivery",
+    "identical observable pre-command ledgers across five arms",
+    "all packet and byte partitions conserved",
+    "readback of handler parameters",
+    "actual C2 QoS header TID6 after Fallback activation",
+    "same offered schedules/trajectory/propagation across arms",
+    "fixed binary/input hashes across formal runs"
+  ],
+  "claim_boundary": "Independent packet-level discrete-event simulation, using one public transport-emission input case. No field outcome, original 25D diagnostic, BLE/RID coexistence, or end-to-end policy superiority is established. Do not select the best action retrospectively and call it the proposed policy. Retain every run, effect direction and unresolved outcome."
+}

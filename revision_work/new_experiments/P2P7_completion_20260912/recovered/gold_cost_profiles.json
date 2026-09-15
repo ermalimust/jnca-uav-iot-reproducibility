@@ -1,0 +1,23 @@
+{
+  "profile_templates": {
+    "safety_first": {
+      "description": "C2 and safety protection dominate throughput and overhead.",
+      "default_weights": {"safety": 0.62, "throughput": 0.14, "overhead": 0.10, "mismatch": 0.14}
+    },
+    "balanced": {
+      "description": "C2 safety, RID compliance, throughput, overhead, and mismatch are comparable.",
+      "default_weights": {"safety": 0.35, "throughput": 0.25, "overhead": 0.20, "mismatch": 0.20}
+    },
+    "throughput_preserving": {
+      "description": "Payload/video throughput is important; fallback and unnecessary shaping are penalized.",
+      "default_weights": {"safety": 0.25, "throughput": 0.48, "overhead": 0.12, "mismatch": 0.15}
+    }
+  },
+  "mission_profiles_file": "mission_intents.jsonl",
+  "notes": [
+    "Each JSONL mission record is the gold cost profile for that natural-language intent.",
+    "The fields gold_cost_profile, guards, family_mix, and cost_weights are treated as manually checked labels for the LLM compiler evaluation.",
+    "These gold profiles are not physical constants; they are reviewer-facing operational preferences used to audit whether mission intent is compiled into a safe structured decision context."
+  ]
+}
+

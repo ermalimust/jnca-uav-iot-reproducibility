@@ -1,0 +1,42 @@
+{
+  "supported_actions": {
+    "Observe": {
+      "description": "Wait for additional diagnostic evidence without changing radio or traffic parameters.",
+      "targets": [],
+      "risk": "Unsafe for safety-critical missions when posterior risk is already high."
+    },
+    "WiFiRelief": {
+      "description": "Reduce Wi-Fi contention by relieving channel access pressure or reshaping Wi-Fi-heavy traffic.",
+      "targets": ["W"],
+      "risk": "May be ineffective when degradation is driven by BLE/RID occupancy or mobility fading."
+    },
+    "BLEAvoid": {
+      "description": "Avoid BLE/Remote-ID occupancy windows or shift C2 timing away from periodic occupancy.",
+      "targets": ["B"],
+      "risk": "May not improve video burst pressure or mobility fading."
+    },
+    "LinkAdapt": {
+      "description": "Apply link/rate/path adaptation for mobility-induced fading or blockage.",
+      "targets": ["M"],
+      "risk": "Can add switching overhead if used without mobility evidence."
+    },
+    "VideoShape": {
+      "description": "Pace or shape video/sensing traffic to reduce queue pressure.",
+      "targets": ["V"],
+      "risk": "Can harm inspection utility if used when video is not the bottleneck."
+    },
+    "FallbackProtect": {
+      "description": "Enter conservative protection mode that prioritizes C2 safety under uncertainty or mixed causes.",
+      "targets": ["W", "B", "M"],
+      "risk": "Can sacrifice throughput and payload utility if overused."
+    }
+  },
+  "explicitly_unsupported_examples": [
+    "DisableRemoteID",
+    "DropC2Traffic",
+    "ForceMaxPower",
+    "SwitchAllTo5G",
+    "EmergencyLand"
+  ]
+}
+
