@@ -44,7 +44,7 @@ At a shared three-candidate budget, the recorded Qwen compiler has lower assigne
 | Location | Contents |
 |---|---|
 | `scripts/` | Version-aware download and read-only verification entry points |
-| `manifests/revision_v1.1.0.json` | Pinned URLs, sizes, SHA-256 hashes and extraction destinations for all five archives |
+| `manifests/revision_v1.1.0.json` | Pinned download locations and extraction destinations for all five archives |
 | `manifests/files_p25_v1.1.0.json` | Complete inventory of the 1,025 unchanged P25 archive files |
 | `P25_README.md` | P25 scope, source paths, statistical units and historical documentation notes |
 | `data/v1.0.0/` after download | Four original archives extracted together, including `revision_work/`, `output/`, `supplementary/` and original manifests |

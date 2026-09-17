@@ -1,6 +1,6 @@
 # P25 catalogue adaptation and RID sensitivity
 
-The [v1.1.0 release](https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/tag/v1.1.0) publishes `P25_catalogue_adaptation_increment_20260916.zip`, the complete frozen study accompanying Supplementary Section S24, with its separately labeled post-hoc sensitivity addendum. The ZIP is byte-identical to the checked submission supplement: all 1,025 files are preserved. Its SHA-256 is recorded in `manifests/revision_v1.1.0.json` and `SHA256SUMS_v1.1.0.txt`.
+The [v1.1.0 release](https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/tag/v1.1.0) publishes `P25_catalogue_adaptation_increment_20260916.zip`, the complete frozen study accompanying Supplementary Section S24, with its separately labeled post-hoc sensitivity addendum. The ZIP is byte-identical to the checked submission supplement: all 1,025 files are preserved. The versioned download and offline replay commands are provided below.
 
 ## One-command offline replay
 
