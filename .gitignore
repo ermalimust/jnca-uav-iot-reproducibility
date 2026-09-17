@@ -3,5 +3,6 @@ __pycache__/
 .venv/
 .downloads/
 verification_output/
+data/
 *.zip
 *.exe
