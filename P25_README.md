@@ -1,6 +1,6 @@
 # P25 catalogue adaptation and RID sensitivity
 
-The [v1.1.0 release](https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/tag/v1.1.0) publishes `P25_catalogue_adaptation_increment_20260916.zip`, the complete frozen study accompanying Supplementary Section S24, with its separately labeled post-hoc sensitivity addendum. The ZIP is byte-identical to the checked submission supplement: all 1,025 files are preserved. The versioned download and offline replay commands are provided below.
+The [v1.1.0 release](https://github.com/ermalimust/jnca-uav-iot-reproducibility/releases/tag/v1.1.0) publishes `P25_catalogue_adaptation_increment_20260916.zip`, the complete frozen study accompanying Supplementary Section S24, with its separately labeled post-hoc sensitivity addendum. The later revision submission uploads a reader edition derived from this release: it retains all 1,025 original files, changes only three reader-facing documents, and adds a `reader_manifest.json` listing every difference and hash. Scientific data, code and results are unchanged. The commands below replay the original v1.1.0 release asset.
 
 ## One-command offline replay
 
@@ -35,6 +35,6 @@ The two unintended literal `rid` matches in “Bridge” and “corridor” affe
 
 ## Historical documentation and integrity
 
-The ZIP preserves dated pre-publication documentation, including the original top-level README's statement that it had not yet been published, the initial `EXPERIMENT_PROTOCOL_DRAFT.json`, audit discussions and original host-path receipts. Those statements describe their creation time. This page records current public availability; the study's frozen `protocol.json` and seals define the completed formal experiment. Do not rerun `prepare.py` or `freeze.py` over the archive. No study source, prompt, response, outcome or original manifest was rewritten for publication.
+The original release ZIP preserves dated pre-publication documentation, including the original top-level README's statement that it had not yet been published, the initial `EXPERIMENT_PROTOCOL_DRAFT.json`, audit discussions and original host-path receipts. Those statements describe their creation time. The submitted reader edition clarifies historical context in three reader-facing documents and records the changes in its added manifest; it does not rewrite the public release. The study's frozen `protocol.json` and seals define the completed formal experiment. Do not rerun `prepare.py` or `freeze.py` over the archive. No study source, prompt, response, outcome or original scientific manifest was rewritten for publication.
 
 The original `manifest.json` and addendum manifest retain their historical scope. The repository's `manifests/files_p25_v1.1.0.json` additionally covers every delivered file, including both historical manifests and wrapper documentation. Regenerating model outputs is a separate experiment requiring a provider account; it is not part of offline verification and need not reproduce the saved generation.
